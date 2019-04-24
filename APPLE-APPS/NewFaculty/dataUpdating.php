@@ -2,9 +2,9 @@
 
 <?php
 $servername= "localhost";
-        $username = "XDJ";
-        $password = "CSCI2541_sp19";
-        $dbname = "XDJ";
+$username = "amstg";
+$password = "seas";
+$dbname = "amstg";
 $conn = new mysqli($servername,$username,$password,$dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -90,7 +90,10 @@ $conn->close();
 
 <!DOCTYPE html>
 <html>
-
+<head>
+    <title>Applicant Info</title>
+    <link rel="stylesheet" href="../../APPLE2/style.css">
+</head>
 <body>
 <h2 style="text-align:center;"> Now please update</h2>
 <h3> Update Transcript Status</h3>

@@ -4,10 +4,10 @@
 <html>
 	<body>
 		<?php
-			$servername = "localhost";
-    $username = "rmgordon";
-    $password = "hockeyD8$";
-    $dbname = "rmgordon";
+        $servername= "localhost";
+        $username = "amstg";
+        $password = "seas";
+        $dbname = "amstg";
 			$conn = mysqli_connect($servername, $username, $password, $dbname);
 			if(!$conn){
 				die("Connection failed: " . mysql_connect_error());
@@ -31,16 +31,38 @@
 			}
 			if(!empty($user) && !empty($pass)){
 				if($usertype == 'F'){
+
 					$_SESSION['emptyErr'] = "";
 					$result = $conn->query($sqlF); 
 					$row = mysqli_fetch_array($result);
 					if($row > 0){
-						$_SESSION['user'] = $row['username'];
-						$_SESSION['pass'] = $row['passwrd'];
-						$_SESSION['userID'] = $row['fID'];
-						$_SESSION['fname'] = $row['fname'];
-						header('Location: faculty.php');
-						exit();
+
+					    if($row[reviewerType]=="C")
+
+                        {
+                            $_SESSION['user'] = $row['username'];
+                            $_SESSION['pass'] = $row['passwrd'];
+                            $_SESSION['userID'] = $row['fID'];
+                            $_SESSION['fname'] = $row['fname'];
+                            header('Location: facultyCAC.php');
+                            exit();
+                        }
+					    else if($row[reviewerType]=="R")
+                        {
+                            $_SESSION['user'] = $row['username'];
+                            $_SESSION['pass'] = $row['passwrd'];
+                            $_SESSION['userID'] = $row['fID'];
+                            $_SESSION['fname'] = $row['fname'];
+                            header('Location: facultyReviewer.php');
+                            exit();
+                        }else{
+					        $_SESSION['user'] = $row['username'];
+                            $_SESSION['pass'] = $row['passwrd'];
+                            $_SESSION['userID'] = $row['fID'];
+                            $_SESSION['fname'] = $row['fname'];
+                            header('Location: faculty.php');
+                            exit();
+					    }
 					}
 					$_SESSION['emptyErr'] = "Invalid credentials!";
 					header("Location: main.php");

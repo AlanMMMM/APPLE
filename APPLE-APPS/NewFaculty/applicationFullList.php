@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-     <head>
-		<title>Course Catalog</title>
-		<link rel="stylesheet" href="style.css">
-	</head>
+<head>
+    <title>Applicant Info</title>
+    <link rel="stylesheet" href="../../APPLE2/style.css">
+</head>
 <body>
     <input type=button onClick="location.href='../LogIn/login.php'" value='Log Out'>
 <h2 style="text-align:center;"> Welcome </h2>

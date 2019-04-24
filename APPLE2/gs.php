@@ -17,6 +17,10 @@
 			<input type="submit" value="Enter grades" />
 	 </form>
 
+        <form action="../APPLE-APPS/NewFaculty/applicationCompleteList.php">
+            <input type="submit" value="Go to Application System" />
+        </form>
+
 	 <form method="post" action="transcript.php">
 		 <label for="sid">Student ID:</label><br>
 		 <input type="text" name="sid">

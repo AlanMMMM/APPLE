@@ -1,9 +1,9 @@
 <?php
 	session_start();
-	$servername = "localhost";
-    $username = "rmgordon";
-    $password = "hockeyD8$";
-    $dbname = "rmgordon";
+$servername= "localhost";
+$username = "amstg";
+$password = "seas";
+$dbname = "amstg";
 
 	$conn = mysqli_connect($servername, $username, $password, $dbname);
 	if(!$conn){

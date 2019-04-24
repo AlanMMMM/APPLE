@@ -2,12 +2,12 @@
     session_start();
     $currID = $_SESSION['currentID'];
     echo $currID;
-    
-    
-    $servername = "localhost";
-    $username = "rmgordon";
-    $password = "hockeyD8$";
-    $dbname = "rmgordon";
+
+
+$servername= "localhost";
+$username = "amstg";
+$password = "seas";
+$dbname = "amstg";
   
     $conn = mysqli_connect($servername, $username, $password, $dbname);
     if(!$conn){
