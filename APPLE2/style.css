@@ -1,0 +1,29 @@
+body {
+  background-color: rgb(202, 226, 226);
+}
+form label {
+  display: inline-block;
+  width: 100;
+}
+input[type=submit] {
+  border-radius: 12px;
+  background-color: maroon;
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h2 {
+  color: maroon;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 200%;
+}
+th {
+  background-color: maroon;
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+tr:nth-child(odd) {
+  background-color: white;
+}
