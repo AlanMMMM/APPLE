@@ -12,6 +12,7 @@ drop table if exists student cascade;
 drop table if exists personnel cascade;
 drop table if exists course cascade;
 drop table if exists enroll cascade;
+drop table if exists form cascade;
 DROP TABLE IF EXISTS user CASCADE;
 
 CREATE TABLE user(
@@ -83,7 +84,7 @@ CREATE TABLE application(
   masters_gpa double,
   area_of_interest varchar(25),
   degree_seeking varchar(25),
-  FOREIGN KEY(uid) REFERENCES applicant(uid)
+  FOREIGN KEY(uid) REFERENCES user(uid)
   );
   
 -- Required pre populated data  
