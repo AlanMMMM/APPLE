@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ae0e6af-1e1f-4566-9aa0-6567bdfb068b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/APPLE-APPS/LogIn/acceptOrDecline.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APPLE-APPS/LogIn/status.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE-APPS/LogIn/status.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APPLE2/approveHold.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/approveHold.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APPLE2/courseCatalog.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/courseCatalog.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APPLE2/deleteAll.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/deleteAll.php" afterDir="false" />
@@ -12,22 +14,8 @@
       <change beforePath="$PROJECT_DIR$/APPLE2/enrolledStud.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/enrolledStud.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APPLE2/entry.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/entry.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APPLE2/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/gpa.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/gpa.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/gradeGs.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/gradeGs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/gsCourse.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/gsCourse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/gsEnroll.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/gsEnroll.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/holdChange.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/holdChange.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APPLE2/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/newCourse.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/newCourse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/newGrad.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/newGrad.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/newMember.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/newMember.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/newStudent.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/newStudent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/registration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/teachCourse.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/teachCourse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/transcript.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/transcript.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/viewGs.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/viewGs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/schema.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,94 +24,101 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/APPLE2/entry.php">
+        <entry file="file://$PROJECT_DIR$/APPLE2/facultyReviewer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+            <state relative-caret-position="450">
+              <caret line="30" column="7" lean-forward="true" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/APPLE2/enrolledStud.php">
+        <entry file="file://$PROJECT_DIR$/APPLE2/facultyCAC.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+            <state relative-caret-position="255">
+              <caret line="17" column="54" lean-forward="true" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/APPLE2/enrolledIn.php">
+        <entry file="file://$PROJECT_DIR$/APPLE2/form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+            <state relative-caret-position="-702">
+              <caret line="44" selection-start-line="44" selection-end-line="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/APPLE2/editProfile.php">
+        <entry file="file://$PROJECT_DIR$/schema.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+            <state relative-caret-position="195">
+              <caret line="13" column="36" lean-forward="true" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/APPLE2/dropCourse.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/APPLE2/deleteAll.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/APPLE2/courseCatalog.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/APPLE2/approveHold.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/APPLE2/advisor.php">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/APPLE2/login.php">
+        <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/status.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+            <state relative-caret-position="319">
+              <caret line="67" column="23" lean-forward="true" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
+              <folding>
+                <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/login.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/loginCheck.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="945">
+              <caret line="63" column="21" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/mainpage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="32" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/acceptOrDecline.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+              <folding>
+                <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/adminCreate.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>session</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -153,16 +148,19 @@
         <option value="$PROJECT_DIR$/APPLE2/gsCourse.php" />
         <option value="$PROJECT_DIR$/APPLE2/gradeGs.php" />
         <option value="$PROJECT_DIR$/APPLE2/gpa.php" />
-        <option value="$PROJECT_DIR$/APPLE2/form.php" />
+        <option value="$PROJECT_DIR$/APPLE2/login.php" />
+        <option value="$PROJECT_DIR$/APPLE2/approveHold.php" />
+        <option value="$PROJECT_DIR$/APPLE2/courseCatalog.php" />
+        <option value="$PROJECT_DIR$/APPLE2/deleteAll.php" />
+        <option value="$PROJECT_DIR$/APPLE2/dropCourse.php" />
+        <option value="$PROJECT_DIR$/APPLE2/editProfile.php" />
+        <option value="$PROJECT_DIR$/APPLE2/enrolledIn.php" />
         <option value="$PROJECT_DIR$/APPLE2/entry.php" />
         <option value="$PROJECT_DIR$/APPLE2/enrolledStud.php" />
-        <option value="$PROJECT_DIR$/APPLE2/enrolledIn.php" />
-        <option value="$PROJECT_DIR$/APPLE2/editProfile.php" />
-        <option value="$PROJECT_DIR$/APPLE2/dropCourse.php" />
-        <option value="$PROJECT_DIR$/APPLE2/deleteAll.php" />
-        <option value="$PROJECT_DIR$/APPLE2/courseCatalog.php" />
-        <option value="$PROJECT_DIR$/APPLE2/approveHold.php" />
-        <option value="$PROJECT_DIR$/APPLE2/login.php" />
+        <option value="$PROJECT_DIR$/APPLE2/form.php" />
+        <option value="$PROJECT_DIR$/schema.sql" />
+        <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/acceptOrDecline.php" />
+        <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/status.php" />
       </list>
     </option>
   </component>
@@ -192,6 +190,12 @@
               <item name="APPLE" type="b2602c69:ProjectViewProjectNode" />
               <item name="APPLE" type="462c0819:PsiDirectoryNode" />
               <item name="APPLE-APPS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="APPLE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="APPLE" type="462c0819:PsiDirectoryNode" />
+              <item name="APPLE-APPS" type="462c0819:PsiDirectoryNode" />
+              <item name="LogIn" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="APPLE" type="b2602c69:ProjectViewProjectNode" />
@@ -239,24 +243,20 @@
       <option name="presentableId" value="Default" />
       <updated>1556118717752</updated>
       <workItem from="1556118721080" duration="2211000" />
+      <workItem from="1556957072029" duration="1747000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2211000" />
+    <option name="totallyTimeSpent" value="3958000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="191" y="145" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -264,35 +264,21 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/schema.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1908" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/APPLE-APPS/NewFaculty/reviewing.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/APPLE-APPS/NewFaculty/makeUpdate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/APPLE-APPS/NewFaculty/makeRec.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
@@ -463,10 +449,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/APPLE2/form.php">
+    <entry file="file://$PROJECT_DIR$/APPLE2/advisor.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/APPLE2/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+        <state relative-caret-position="-1407">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/APPLE2/approveHold.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-447">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/APPLE2/courseCatalog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-686">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/APPLE2/deleteAll.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1016">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/APPLE2/dropCourse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/APPLE2/editProfile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/APPLE2/enrolledIn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-491">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/APPLE2/entry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="n#style#0;n#label#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/APPLE2/enrolledStud.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/APPLE2/faculty.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
@@ -484,76 +539,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/APPLE2/faculty.php">
+    <entry file="file://$PROJECT_DIR$/APPLE2/form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="-702">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/APPLE2/entry.php">
+    <entry file="file://$PROJECT_DIR$/schema.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+        <state relative-caret-position="195">
+          <caret line="13" column="36" lean-forward="true" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/APPLE2/enrolledStud.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/APPLE2/enrolledIn.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/APPLE2/editProfile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/APPLE2/dropCourse.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/APPLE2/deleteAll.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/APPLE2/courseCatalog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/APPLE2/approveHold.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/APPLE2/advisor.php">
+    <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/login.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/APPLE2/login.php">
+    <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/adminCreate.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/loginCheck.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        <state relative-caret-position="945">
+          <caret line="63" column="21" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/mainpage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="32" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/acceptOrDecline.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/status.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="67" column="23" lean-forward="true" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

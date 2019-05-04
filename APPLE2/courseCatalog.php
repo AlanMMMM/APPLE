@@ -11,18 +11,18 @@
   
   <?php  
    session_start();
-<<<<<<< HEAD
+
   $servername = "localhost";
   $username = "rmgordon";
   $password = "hockeyD8$";
   $dbname = "rmgordon";
-=======
+
    
     $servername = "localhost";
     $username = "rmgordon";
     $password = "hockeyD8$";
     $dbname = "rmgordon";
->>>>>>> ed7cfa17fa25d28f702595c28342258a89b44198
+
   
     $conn = mysqli_connect($servername, $username, $password, $dbname);
     if(!$conn){

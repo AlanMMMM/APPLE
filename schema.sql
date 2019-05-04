@@ -37,7 +37,8 @@ CREATE TABLE applicant(
   app_rec_comment varchar(40),
   app_deficiency_courses varchar(40),
   reason_for_reject varchar(1),
-  
+  payment varchar(1),
+  accept_offer varchar(1),
   FOREIGN KEY (uid) REFERENCES user(uid)
   );
   
@@ -92,7 +93,7 @@ CREATE TABLE application(
 
 INSERT INTO user VALUES('jlennon','54321','student',55555555);  
 INSERT INTO application VALUES (55555555,'111111111','123 spring st','new york','NY',10002,'abcde@abcde.com','FALL',180,180,2017,200,"physics",100,2018,'GWU','BS','CS',2019,3.0,NULL,NULL,NULL,NULL,NULL,'CS','master');
-INSERT INTO applicant VALUES ('John','Lennon',55555555,'completed','Yes','Yes',NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO applicant VALUES ('John','Lennon',55555555,'completed','Yes','Yes',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 
 
 INSERT INTO user VALUES('rstarr','54321','student',66666666);
@@ -109,9 +110,9 @@ INSERT INTO recommendation VALUES (12345,'Tim','Wood','professor','Rick is a gre
 INSERT INTO user (username,password,role,uid) VALUES ('rick','12345','student',1);
 INSERT INTO user (username,password,role,uid) VALUES ('tom','12345','student',2);
 INSERT INTO user (username,password,role,uid) VALUES ('tony','12345','student',3);
-INSERT INTO applicant VALUES ('rick','lee',1,'completed','Yes','Yes',NULL,NULL,NULL,NULL,NULL,NULL);
-INSERT INTO applicant VALUES ('tom','ford',2,'completed','Yes','Yes',NULL,NULL,NULL,NULL,NULL,NULL);
-INSERT INTO applicant VALUES ('tony','allen',3,'pending','Yes','No',NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO applicant VALUES ('rick','lee',1,'completed','Yes','Yes',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO applicant VALUES ('tom','ford',2,'completed','Yes','Yes',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO applicant VALUES ('tony','allen',3,'pending','Yes','No',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO recommendation VALUES (1,'Tim','Wood','professor','Rick is a great student',0,NULL,NULL,1);
 INSERT INTO recommendation VALUES (2,'Tim','Wood','professor','Tom is a great student as well',0,NULL,NULL,2);
 INSERT INTO application VALUES (1,'123456789','123 spring st','new york','NY',10002,'abcde@abcde.com','FALL',180,180,2017,180,"physics",100,2018,'GWU','BS','CS',2019,3.0,NULL,NULL,NULL,NULL,NULL,'CS','master');
