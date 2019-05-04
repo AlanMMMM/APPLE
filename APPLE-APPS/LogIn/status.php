@@ -83,7 +83,7 @@ session_start();
    mysqli_close($conn);
 ?>
 <br />
-    <input type=button onClick="location.href='acceptOrDecline.php'" value='Make Your Decision'>
+
   <input type=button onClick="location.href='mainpage.php'" value='Back to home page'>
 </body>
 </html>
