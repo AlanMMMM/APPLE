@@ -33,8 +33,9 @@ if ($conn->connect_error) {
             $password=$rowUser['password'];
             $city=$rowApp['city'];
             $sQuery = "INSERT INTO student VALUES ('$fname', '$lname', '$username', '$email','Dawn Ginetti',1, '$password', $uid, 'cs', '$city')";
+            $sResult=$conn->query($sQuery) or die("mysql error".$mysqli->error);
             echo "Payment Received!";
-            echo "<input type=button onClick=\"location.href=\"../../APPLE2/login.php\"\" value='Student Portal'></body></html>";
+            echo " <input type=button onClick=\"location.href='../../APPLE2/login.php'\" value='Student Portal'>";
         }else{
             echo "failed to make payment, please try again";
         }

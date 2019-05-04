@@ -78,7 +78,7 @@ session_start();
              echo "<input type=button onClick=\"location.href='payment.php'\" value='Make Your Payment'></body></html>";
          }
          if($row['accept_offer']==1&&$row['payment']==1){
-             echo "<input type=button onClick=\"location.href=\"../../APPLE2/login.php\"\" value='Log In As Student'></body></html>";
+             echo " <input type=button onClick=\"location.href='../../APPLE2/login.php'\" value='Student Portal'>";
          }
          if($row['accept_offer']==2){
              echo "You've declined the offer.";
@@ -98,7 +98,7 @@ session_start();
            echo "<input type=button onClick=\"location.href='payment.php'\" value='Make Your Payment'></body></html>";
        }
        if($row['accept_offer']==1&&$row['payment']==1){
-           echo "<input type=button onClick=\"location.href=\"../../APPLE2/login.php\"\" value='Log In As Student'></body></html>";
+           echo " <input type=button onClick=\"location.href='../../APPLE2/login.php'\" value='Student Portal'>";
        }
          if($row['accept_offer']==2){
              echo "You've declined the offer.";
