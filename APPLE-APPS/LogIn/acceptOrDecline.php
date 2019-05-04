@@ -9,7 +9,8 @@ session_start();
 </head>
 
 <body>
-<h1>Make Your Decision:</h1>
+<h1>Your Decision:</h1>
+
 <?php
 
 $servername = "localhost";
@@ -29,52 +30,44 @@ $result = mysqli_query($conn,$query);
 
 $num = mysqli_num_rows($result);
 
-if($num==0)
-{
-    die("Application has not been completed");
-}
+$row = mysqli_fetch_array($result);   // Goes through results and displays them
 
+if(isset($_POST['goAccept'])){
+$aQuery = "UPDATE applicant A SET A.accept_offer=1 WHERE A.uid='$uid'";
 
-
-
-if($result){
-    echo "<table style = width:30%>";
-
-    $row = mysqli_fetch_array($result);   // Goes through results and displays them
-    echo "<tr><td>" . "Application form status:" . "</td><td>" . "Transcript received:" . "</td><td>" . "Recommendation received:" . "</td></tr>";
-    echo "<tr><td>" . "Completed" . "</td><td>" . $row['transcript_received'] . "</td><td>" . $row['rec_received'] . "</td></tr>";
-
-
-    echo "</table>" . "<br />";
-}
-
-else {
-    //echo "Error: " . $query . "<br>" . mysqli_error($conn);
-    echo "There was an error getting your status, please log out and back in to your account";
-}
-
-
-if($row['transcript_received'] == "No" || $row['rec_received'] == "No"){
-    echo "Your application has not been completed";
-}
-else{
-    if($row['decision'] == 0)
-        echo "<br />Your application has been completed and is under review";
-    if($row['decision'] == 3){
-        echo "<br />Your application has been denied<br>";
-
-    }
-    if($row['decision'] == 2){
-        echo "<br />You have been accepted into GWU your acceptance letter will be mailed<br />";
-        echo "Your advisor will be: " . $row['app_rec_advisor'];
-
-
-    }
-    if($row['decision'] == 1){
-        echo "<br />You have been accepted into GWU with aid your acceptance letter will be mailed<br />";
-        echo "Your advisor will be: " . $row['app_rec_advisor'];
+$checkResult=$conn->query($query) or die("mysql error".$mysqli->error);
+if($checkResult->num_rows==0){
+    echo "No Applicant Found";
+}else{
+    $aResult = $conn->query($aQuery) or die("mysql error".$mysqli->error);
+    if($aResult==TRUE) {
+        echo "Thank you for your choice! Now Please make your payment!<br />";
+        echo "<input type=button onClick=\"location.href='payment.php'\" value='Make Your Payment'></body></html><br />";
+        echo "<input type=button onClick=\"location.href='mainpage.php'\" value='Make Payment Later'></body></html><br />";
+    }else{
+        echo "failed to make your choice, please try again";
     }
 }
+}
+if(isset($_POST['goDecline'])){
+    $aQuery = "UPDATE applicant A SET A.accept_offer=2 WHERE A.uid='$uid'";
+
+    $checkResult=$conn->query($query) or die("mysql error".$mysqli->error);
+    if($checkResult->num_rows==0){
+        echo "No Applicant Found";
+    }else{
+        $aResult = $conn->query($aQuery) or die("mysql error".$mysqli->error);
+        if($aResult==TRUE) {
+            echo "Sorry To Hear That! Please Consider Us Next Time!<br />";
+
+        }else{
+            echo "failed to make your choice, please try again";
+        }
+    }
+
+}
+
+
 
 
 mysqli_close($conn);

@@ -67,15 +67,42 @@ session_start();
      }
      if($row['decision'] == 2){
        echo "<br />You have been accepted into GWU your acceptance letter will be mailed<br />";
-       echo "Your advisor will be: " . $row['app_rec_advisor'];
-         echo "<input type=button onClick=\"location.href='acceptOrDecline.php'\" value='Make Your Decision Now!'></body></html>";
-
-
+       echo "Your advisor will be: " . $row['app_rec_advisor']."<br />";
+         if($row['accept_offer']==0) {
+             echo "<form action=\"acceptOrDecline.php\" method=\"post\">
+    <input type=\"submit\" name=\"goAccept\" value=\"Accept The Offer\" /></form><br />";
+             echo "<form action=\"acceptOrDecline.php\" method=\"post\">
+    <input type=\"submit\" name=\"goDecline\" value=\"Decline The Offer\" /></form><br />";
+         }
+         if($row['accept_offer']==1&&$row['payment']==0){
+             echo "<input type=button onClick=\"location.href='payment.php'\" value='Make Your Payment'></body></html>";
+         }
+         if($row['accept_offer']==1&&$row['payment']==1){
+             echo "<input type=button onClick=\"location.href=\"../../APPLE2/login.php\"\" value='Log In As Student'></body></html>";
+         }
+         if($row['accept_offer']==2){
+             echo "You've declined the offer.";
+         }
      }
+
      if($row['decision'] == 1){
        echo "<br />You have been accepted into GWU with aid your acceptance letter will be mailed<br />";
-       echo "Your advisor will be: " . $row['app_rec_advisor'];
-       echo "<input type=button onClick=\"location.href='acceptOrDecline.php'\" value='Make Your Decision Now!'></body></html>";
+       echo "Your advisor will be: " . $row['app_rec_advisor']."<br />";
+       if($row['accept_offer']==0) {
+           echo "<form action=\"acceptOrDecline.php\" method=\"post\">
+    <input type=\"submit\" name=\"goAccept\" value=\"Accept The Offer\" /></form><br />";
+           echo "<form action=\"acceptOrDecline.php\" method=\"post\">
+    <input type=\"submit\" name=\"goDecline\" value=\"Decline The Offer\" /></form><br />";
+       }
+       if($row['accept_offer']==1&&$row['payment']==0){
+           echo "<input type=button onClick=\"location.href='payment.php'\" value='Make Your Payment'></body></html>";
+       }
+       if($row['accept_offer']==1&&$row['payment']==1){
+           echo "<input type=button onClick=\"location.href=\"../../APPLE2/login.php\"\" value='Log In As Student'></body></html>";
+       }
+         if($row['accept_offer']==2){
+             echo "You've declined the offer.";
+         }
      }
    }
    

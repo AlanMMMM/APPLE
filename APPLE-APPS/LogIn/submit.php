@@ -235,11 +235,11 @@ session_start();
    }   
       	
     
-<<<<<<< HEAD
+
       $msg = "Send a recommendation for " . $first_name . " " . $last_name . " by following the link below: \n" . "Id number is: " . $rid . " \n" . "http://gwupyterhub.seas.gwu.edu/~sp19DBp1-XDJ/XDJ/LogIn/recommendation.html";
-=======
+
       $msg = "Send a recommendation by following the link below: \n" . "Id number is: " . $rid . " \n" . "http://gwupyterhub.seas.gwu.edu/~sp19DBp1-XDJ/XDJ/LogIn/recommendation.html";
->>>>>>> 5409a7c30f2b4f723c954fdd1adf650ce6010c29
+
 
 // use wordwrap() if lines are longer than 70 characters
 $msg = wordwrap($msg,70);

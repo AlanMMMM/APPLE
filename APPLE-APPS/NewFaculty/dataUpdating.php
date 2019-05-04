@@ -90,14 +90,12 @@ $conn->close();
 
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
+
 <head>
     <title>Applicant Info</title>
     <link rel="stylesheet" href="../../APPLE2/style.css">
 </head>
-=======
 
->>>>>>> ed7cfa17fa25d28f702595c28342258a89b44198
 <body>
 <h2 style="text-align:center;"> Now please update</h2>
 <h3> Update Transcript Status</h3>

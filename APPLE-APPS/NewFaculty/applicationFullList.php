@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
+
 <head>
     <title>Applicant Info</title>
     <link rel="stylesheet" href="../../APPLE2/style.css">
 </head>
-=======
-     <head>
-		<title>Course Catalog</title>
-		<link rel="stylesheet" href="style.css">
-	</head>
->>>>>>> ed7cfa17fa25d28f702595c28342258a89b44198
+
+
+
 <body>
     <input type=button onClick="location.href='../LogIn/login.php'" value='Log Out'>
 <h2 style="text-align:center;"> Welcome </h2>
