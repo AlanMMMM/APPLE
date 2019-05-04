@@ -20,10 +20,14 @@
 
     <?php
       session_start();
-    $servername= "localhost";
-    $username = "amstg";
-    $password = "seas";
-    $dbname = "amstg";
+<<<<<<< HEAD
+    $servername = "localhost";
+=======
+      $servername = "localhost";
+>>>>>>> ed7cfa17fa25d28f702595c28342258a89b44198
+    $username = "rmgordon";
+    $password = "hockeyD8$";
+    $dbname = "rmgordon";
       // Create connection
       $conn = new mysqli($servername, $username, $password, $dbname);
       // Check connection

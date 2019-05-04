@@ -7,10 +7,17 @@
 
   <?php
   session_start();
-  $servername= "localhost";
-  $username = "amstg";
-  $password = "seas";
-  $dbname = "amstg";
+<<<<<<< HEAD
+  $servername = "localhost";
+  $username = "rmgordon";
+  $password = "hockeyD8$";
+  $dbname = "rmgordon";
+=======
+    $servername = "localhost";
+    $username = "rmgordon";
+    $password = "hockeyD8$";
+    $dbname = "rmgordon";
+>>>>>>> ed7cfa17fa25d28f702595c28342258a89b44198
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
     // Check connection

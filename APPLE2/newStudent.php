@@ -36,10 +36,10 @@
 
     <?php
     session_start();
-    $servername= "localhost";
-    $username = "amstg";
-    $password = "seas";
-    $dbname = "amstg";
+    $servername = "localhost";
+    $username = "rmgordon";
+    $password = "hockeyD8$";
+    $dbname = "rmgordon";
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
     // Check connection
