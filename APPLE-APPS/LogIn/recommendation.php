@@ -39,7 +39,7 @@ $dbname = "amstg";
       
       if	($result)	{	
         //echo		"Thank you for sending a recommendation letter, you can now close this tab.	<br/>";
-          $query = "UPDATE applicant SET rec_received = 'Yes' WHERE uid = $uid;";
+          $query = "UPDATE applicant SET rec_received = 'Yes' WHERE uid = $id_num;";
 
           $result	=	mysqli_query($conn,$query);
 
