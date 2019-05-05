@@ -21,6 +21,7 @@ session_start();
       $zip = $_POST['zip'];
       $degree = $_POST['degree'];
       $app_term = $_POST['app_term'];
+      $app_year = $_POST['app_year'];
       $area_of_interest = $_POST['area_of_interest'];
       $bachelor_school = $_POST['bachelor_school'];
       $bachelor_degree = $_POST['bachelor_degree'];
@@ -51,55 +52,10 @@ session_start();
       // Input check
 
       
-      if (!preg_match("/^[0-9]*$/",$ssn)) {
-      echo "Only numbers allowed for ssn\n";
-      $inputErr++; 
-    }
+
+
     
-    if (!preg_match("/^[0-9]*$/",$zip)) {
-      echo "Only numbers allowed for zip\n";
-      $inputErr++; 
-    }
-    
-    if (!preg_match("/^[0-9]*$/",$bachelor_year)) {
-      echo "Only numbers allowed for your bachelor year\n";
-      $inputErr++; 
-    }
-    
-    
-    if (!preg_match("/^[0-9]*$/",$masters_year)) {
-      echo "Only numbers allowed for your masters year\n";
-      $inputErr++; 
-    }
-    
-    
-    if (!preg_match("/^[0-9]*$/",$GRE_score)) {
-      echo "Only numbers allowed for your masters gpa\n";
-      $inputErr++; 
-    }
-    
-    
-    if (!preg_match("/^[0-9]*$/",$GRE_verbal)) {
-      echo "Only numbers allowed for your GRE verbal\n";
-      $inputErr++; 
-    }
-    
-    if (!preg_match("/^[0-9]*$/",$GRE_quantitative)) {
-      echo "Only numbers allowed for your GRE quantitative\n";
-      $inputErr++; 
-    }
-    
-    if (!preg_match("/^[0-9]*$/",$GRE_year)) {
-      echo "Only numbers allowed for your bachelor year\n";
-      $inputErr++; 
-    }
-    
-    if($TOEFL != ""){
-    if (!preg_match("/^[0-9]*$/",$TOEFL)) {
-      echo "Only numbers allowed for your TOEFL\n";
-      $inputErr++; 
-    }
-    }
+
     
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     echo "Email address '$email' is of an invalid format.\n";
@@ -118,12 +74,8 @@ session_start();
       $username = "amstg";
       $password = "seas";
       $dbname = "amstg";
-      /*
-      $servername = "localhost";
-      $username = "";
-      $password = "Chucknorris123!";
-      $dbname = "davidealejos";
-      */
+
+
       // define connection variable
       
       $conn = mysqli_connect($servername,$username,$password,$dbname);
@@ -133,9 +85,7 @@ session_start();
       if(!$conn){
         die("Connection failed: " . mysqli_connect_error());
       }
-      else{
-        //echo "Connection successful <br/>";
-      }
+
       
       
       // Check if app was already completed
@@ -157,8 +107,7 @@ session_start();
   
       // define the sql_insert_query
       
-      // Need to get uid from somewhere (PHP SESSION) using 4 for testing
-      // Using 3 for rid (needs to change to auto increment)
+
       
       $query = "INSERT INTO recommendation (rec_fname,rec_lname,rec_title,uid) VALUES ('$rec_fname','$rec_lname','$rec_title',$uid);";
       
@@ -193,7 +142,7 @@ session_start();
         $TOEFL_year = "NULL";
       }
       
-        $query = "INSERT INTO application (uid,ssn,street,city,state,zip,email,app_term,GRE_verbal,GRE_quantitative,exam_year,bachelor_school,bachelor_degree,bachelor_major,bachelor_year,bachelor_gpa,area_of_interest, degree_seeking, TOEFL_year, TOEFL_score,GRE_subject,GRE_score,masters_school,masters_degree,masters_major,masters_year,masters_gpa) VALUES ($uid, '$ssn', '$street', '$city', '$state', '$zip', '$email', '$app_term', $GRE_verbal, $GRE_quantitative, $GRE_year, '$bachelor_school', '$bachelor_degree', '$bachelor_major', $bachelor_year, $bachelor_gpa, '$area_of_interest', '$degree', $TOEFL_year, $TOEFL,'$GRE_subject',$GRE_score,'$masters_school','$masters_degree','$masters_major',$masters_year,$masters_gpa);";
+        $query = "INSERT INTO application (uid,ssn,street,city,state,zip,email,app_term,app_year,GRE_verbal,GRE_quantitative,exam_year,bachelor_school,bachelor_degree,bachelor_major,bachelor_year,bachelor_gpa,area_of_interest, degree_seeking, TOEFL_year, TOEFL_score,GRE_subject,GRE_score,masters_school,masters_degree,masters_major,masters_year,masters_gpa) VALUES ($uid, '$ssn', '$street', '$city', '$state', '$zip', '$email', '$app_term',$app_year, $GRE_verbal, $GRE_quantitative, $GRE_year, '$bachelor_school', '$bachelor_degree', '$bachelor_major', $bachelor_year, $bachelor_gpa, '$area_of_interest', '$degree', $TOEFL_year, $TOEFL,'$GRE_subject',$GRE_score,'$masters_school','$masters_degree','$masters_major',$masters_year,$masters_gpa);";
       
       
       
@@ -236,16 +185,16 @@ session_start();
       	
     
 
-      $msg = "Send a recommendation for " . $first_name . " " . $last_name . " by following the link below: \n" . "Id number is: " . $rid . " \n" . "http://gwupyterhub.seas.gwu.edu/~sp19DBp1-XDJ/XDJ/LogIn/recommendation.html";
+      $msg = "Send a recommendation for " . $first_name . " " . $last_name . " by following the link below: \n" . "Id number is: " . $rid . " \n" . "http://gwupyterhub.seas.gwu.edu/~sp19DBp2-404TeamNotFound/404TeamNotFound/APPLE-APPS/LogIn/recommendation.html";
 
-      $msg = "Send a recommendation by following the link below: \n" . "Id number is: " . $rid . " \n" . "http://gwupyterhub.seas.gwu.edu/~sp19DBp1-XDJ/XDJ/LogIn/recommendation.html";
+
 
 
 // use wordwrap() if lines are longer than 70 characters
 $msg = wordwrap($msg,70);
 
 // send email
-mail($rec_email,"Recommendation",$msg); 
+mail($rec_email,"Recommendation Letter Request",$msg);
 
 
      
@@ -253,7 +202,7 @@ mail($rec_email,"Recommendation",$msg);
       }
       else{
         echo "There was a problem submiting your application, please try again or contact an administrator for assistance.\n" . $errCheck;
-        echo "Youre subject score is: " . $GRE_score;
+
       }
 
 }
