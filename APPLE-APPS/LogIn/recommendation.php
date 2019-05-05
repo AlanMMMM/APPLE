@@ -47,7 +47,7 @@ $dbname = "amstg";
               echo		"Thank you for sending a recommendation letter, you can now close this tab.	<br/>";
           }
           else	{
-              //echo "Error:	"	.	$query	.	"<br/>"	.	mysqli_error($conn);
+              echo "Error:	"	.	$query	.	"<br/>"	.	mysqli_error($conn);
               echo "The reccomendation could not be submitted, Check Student ID number";
           }
       }	
