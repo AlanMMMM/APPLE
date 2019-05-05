@@ -55,7 +55,7 @@ CREATE TABLE applicant(
   rec_credible varchar(1),
   uid int,
   PRIMARY KEY(rid),
-  FOREIGN KEY(uid) REFERENCES applicant(uid)
+ 
   );
 
 CREATE TABLE application(
