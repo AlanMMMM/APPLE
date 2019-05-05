@@ -2,7 +2,7 @@
 <?php session_start();?>
 <html>
 <head>
-    <title>Course Catalog</title>
+    <title>List Tool</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
