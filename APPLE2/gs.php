@@ -37,6 +37,9 @@
         <form action="statGS.php">
             <input type="submit" value="Statistics Tool" />
         </form>
+        <form action="changeAdvGS.php">
+            <input type="submit" value="Statistics Tool" />
+        </form>
 
 <form action="gsEnroll.php">
 	    	<input type="submit" value="View Enrolled Courses" />
