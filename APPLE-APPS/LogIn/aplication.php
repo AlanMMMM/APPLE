@@ -83,17 +83,17 @@ echo "<br />";
 
       <p> Recommendation Letter 1: </p>
 
-    <label for="rec_email">Recommender's email:</label>
+    <label for="rec_email1">Recommender's email:</label>
     <input type="email" name="rec_email1" /><br />
 
       <p> Recommendation Letter 2: </p>
 
-      <label for="rec_email">Recommender's email:</label>
+      <label for="rec_email2">Recommender's email:</label>
       <input type="email" name="rec_email2" /><br />
 
       <p> Recommendation Letter 3: </p>
 
-      <label for="rec_email">Recommender's email:</label>
+      <label for="rec_email3">Recommender's email:</label>
       <input type="email" name="rec_email3" /><br />
     
 

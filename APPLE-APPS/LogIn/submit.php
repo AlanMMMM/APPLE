@@ -39,50 +39,26 @@ session_start();
       $GRE_year = $_POST['GRE_year'];
       $GRE_subject = $_POST['GRE_subject'];
       $TOEFL = $_POST['TOEFL'];
-
       $rec_email1 = $_POST['rec_email1'];
-
-    $rec_email2 = $_POST['rec_email2'];
-
-    $rec_email3 = $_POST['rec_email3'];
-
-    $uid = $_SESSION["uid"];
+      $rec_email2 = $_POST['rec_email2'];
+      $rec_email3 = $_POST['rec_email3'];
+      $uid = $_SESSION["uid"];
       $TOEFL_year = $_POST['TOEFL_year'];
       $GRE_score = $_POST['GRE_score'];
       $errCheck = 0;
-
-      
-      // Input check
-
-      
-
-
-    
-
-    
-
-
-      // End input check, continue if no errors
-
       if($inputErr == 0){
       $servername = "localhost";
       $username = "amstg";
       $password = "seas";
       $dbname = "amstg";
 
-
       // define connection variable
-      
       $conn = mysqli_connect($servername,$username,$password,$dbname);
-
       // Check connection
-      
       if(!$conn){
         die("Connection failed: " . mysqli_connect_error());
       }
 
-      
-      
       // Check if app was already completed
       
       $query = "SELECT * from applicant where uid = $uid;";
@@ -96,47 +72,24 @@ session_start();
         echo "<input type=button onClick=\"location.href='mainpage.php'\" value='Back to home page'>";
       }
       
-      
 
-      
-  
-      // define the sql_insert_query
-      
-
-      
-
-
-
-
-      
-      
-
-      
-      
-
-
-
-   $msg1 = "Send a recommendation for " . $first_name . " " . $last_name . " by following the link below: \n" . "Student Id number is: " . $uid . " \n" . "http://gwupyterhub.seas.gwu.edu/~sp19DBp2-404TeamNotFound/404TeamNotFound/APPLE-APPS/LogIn/recommendation.html";
+          $msg1 = "Send a recommendation for " . $first_name . " " . $last_name . " by following the link below: \n" . "Student Id number is: " . $uid . " \n" . "http://gwupyterhub.seas.gwu.edu/~sp19DBp2-404TeamNotFound/404TeamNotFound/APPLE-APPS/LogIn/recommendation.html";
 // use wordwrap() if lines are longer than 70 characters
-    $msg1 = wordwrap($msg1,70);
+          $msg1 = wordwrap($msg1,70);
 // send email
-    $mail1=mail($rec_email1,"Recommendation Letter Request",$msg1);
-
-
+          $mail1=mail("$rec_email1","Recommendation Letter Request","$msg1");
 
           $msg2 = "Send a recommendation for " . $first_name . " " . $last_name . " by following the link below: \n" . "Student Id number is: " . $uid . " \n" . "http://gwupyterhub.seas.gwu.edu/~sp19DBp2-404TeamNotFound/404TeamNotFound/APPLE-APPS/LogIn/recommendation.html";
 // use wordwrap() if lines are longer than 70 characters
           $msg2 = wordwrap($msg2,70);
 // send email
-          $mail2=mail($rec_email2,"Recommendation Letter Request",$msg2);
-
-
+          $mail2=mail("$rec_email2","Recommendation Letter Request","$msg2");
 
           $msg3 = "Send a recommendation for " . $first_name . " " . $last_name . " by following the link below: \n" . "Student Id number is: " . $uid . " \n" . "http://gwupyterhub.seas.gwu.edu/~sp19DBp2-404TeamNotFound/404TeamNotFound/APPLE-APPS/LogIn/recommendation.html";
 // use wordwrap() if lines are longer than 70 characters
           $msg3= wordwrap($msg3,70);
 // send email
-          $mail3=mail($rec_email3,"Recommendation Letter Request",$msg3);
+          $mail3=mail("$rec_email3","Recommendation Letter Request","$msg3");
 
           if(!$mail1||!$mail2||!$mail3){
 
@@ -146,45 +99,30 @@ session_start();
           if(empty($_POST['GRE_score'])){
               $GRE_score = "NULL";
           }
-
           if(empty($_POST['masters_gpa'])){
               $masters_gpa = "NULL";
           }
-
           if(empty($_POST['masters_year'])){
               $masters_year = "NULL";
           }
-
           if(empty($_POST['TOEFL'])){
               $TOEFL = "NULL";
           }
-
           if(empty($_POST['TOEFL_year'])){
               $TOEFL_year = "NULL";
           }
-
           $query = "INSERT INTO application (uid,ssn,street,city,state,zip,email,app_term,app_year,GRE_verbal,GRE_quantitative,exam_year,bachelor_school,bachelor_degree,bachelor_major,bachelor_year,bachelor_gpa,area_of_interest, degree_seeking, TOEFL_year, TOEFL_score,GRE_subject,GRE_score,masters_school,masters_degree,masters_major,masters_year,masters_gpa) VALUES ($uid, '$ssn', '$street', '$city', '$state', '$zip', '$email', '$app_term',$app_year, $GRE_verbal, $GRE_quantitative, $GRE_year, '$bachelor_school', '$bachelor_degree', '$bachelor_major', $bachelor_year, $bachelor_gpa, '$area_of_interest', '$degree', $TOEFL_year, $TOEFL,'$GRE_subject',$GRE_score,'$masters_school','$masters_degree','$masters_major',$masters_year,$masters_gpa);";
-
-
-
           $result	=	mysqli_query($conn,$query);
-
           if	($result)	{
               $errCheck++;
-              //echo		"New	record	created	successfully	<br/>";
           }
           else	{
               echo "Error:	"	.	$query	.	"<br/>"	.	mysqli_error($conn);
           }
-
-
           $query = "INSERT INTO applicant (first_name,last_name,uid,app_status) VALUES ('$first_name','$last_name',$uid,'pending');";
-
           $result	=	mysqli_query($conn,$query);
-
           if	($result)	{
               $errCheck++;
-              //echo		"New	record	created	successfully	<br/>";
           }
           else	{
               echo "Error:	"	.	$query	.	"<br/>"	.	mysqli_error($conn);
