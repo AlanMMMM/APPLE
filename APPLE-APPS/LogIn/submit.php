@@ -50,7 +50,7 @@ session_start();
       $TOEFL_year = $_POST['TOEFL_year'];
       $GRE_score = $_POST['GRE_score'];
       $errCheck = 0;
-      $inputErr = 0;
+      
       
       // Input check
 
@@ -60,15 +60,7 @@ session_start();
     
 
     
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo "Email address '$email' is of an invalid format.\n";
-    $inputErr++;
-}  
 
-    if (!filter_var($rec_email, FILTER_VALIDATE_EMAIL)) {
-    echo "Email address '$email' is of an invalid format.\n";
-    $inputErr++;
-} 
 
       // End input check, continue if no errors
 

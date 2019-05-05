@@ -18,7 +18,7 @@ echo "<br />";
     <label for="lastname">Last name:</label>
     <input type="text" required = "required" name="lastname" maxlength = "15" ><br />
     <label for="email">Email:</label>
-    <input type="text" required = "required" name="email" ><br />
+    <input type="email" required = "required" name="email" ><br />
     <label for="ssn">SSN:</label>
     <input type="number" required = "required" name="ssn" maxlength = "15" ><br />
     Seeking degree: <br />
@@ -84,17 +84,17 @@ echo "<br />";
       <p> Recommendation Letter 1: </p>
 
     <label for="rec_email">Recommender's email:</label>
-    <input type="text" name="rec_email1" /><br />
+    <input type="email" name="rec_email1" /><br />
 
       <p> Recommendation Letter 2: </p>
 
       <label for="rec_email">Recommender's email:</label>
-      <input type="text" name="rec_email2" /><br />
+      <input type="email" name="rec_email2" /><br />
 
       <p> Recommendation Letter 3: </p>
 
       <label for="rec_email">Recommender's email:</label>
-      <input type="text" name="rec_email3" /><br />
+      <input type="email" name="rec_email3" /><br />
     
 
     <input type="submit" value="Submit Application" name="submit" /><br/><br/>

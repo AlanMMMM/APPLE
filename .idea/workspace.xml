@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ae0e6af-1e1f-4566-9aa0-6567bdfb068b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APPLE-APPS/LogIn/aplication.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE-APPS/LogIn/aplication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE-APPS/LogIn/recommendation.html" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE-APPS/LogIn/recommendation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE-APPS/LogIn/recommendation.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE-APPS/LogIn/recommendation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APPLE-APPS/LogIn/submit.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE-APPS/LogIn/submit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/advisor.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/advisor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/student.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/student.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,11 +22,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/aplication.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="723">
-              <caret line="94" selection-start-line="94" selection-end-line="94" />
+            <state relative-caret-position="753">
+              <caret line="96" column="24" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -45,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/submit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="583">
-              <caret line="192" column="72" lean-forward="true" selection-start-line="192" selection-start-column="72" selection-end-line="192" selection-end-column="72" />
+            <state relative-caret-position="465">
+              <caret line="52" column="6" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -169,10 +164,10 @@
         <option value="$PROJECT_DIR$/APPLE2/studentTranscript.php" />
         <option value="$PROJECT_DIR$/APPLE2/transcript.php" />
         <option value="$PROJECT_DIR$/APPLE2/student.php" />
-        <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/aplication.php" />
-        <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/submit.php" />
         <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/recommendation.html" />
         <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/recommendation.php" />
+        <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/aplication.php" />
+        <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/submit.php" />
       </list>
     </option>
   </component>
@@ -261,12 +256,12 @@
       <updated>1556118717752</updated>
       <workItem from="1556118721080" duration="2211000" />
       <workItem from="1556957072029" duration="1747000" />
-      <workItem from="1556958854756" duration="37431000" />
+      <workItem from="1556958854756" duration="37658000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41389000" />
+    <option name="totallyTimeSpent" value="41616000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -607,13 +602,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/submit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="192" column="72" lean-forward="true" selection-start-line="192" selection-start-column="72" selection-end-line="192" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/schema.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2031">
@@ -630,8 +618,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/aplication.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="723">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        <state relative-caret-position="753">
+          <caret line="96" column="24" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/submit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="52" column="6" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
         </state>
       </provider>
     </entry>
