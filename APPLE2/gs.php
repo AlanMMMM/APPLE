@@ -38,7 +38,7 @@
             <input type="submit" value="Statistics Tool" />
         </form>
         <form action="changeAdvGS.php">
-            <input type="submit" value="Statistics Tool" />
+            <input type="submit" value="Chenge Advisor" />
         </form>
 
 <form action="gsEnroll.php">

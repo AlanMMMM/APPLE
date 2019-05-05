@@ -17,7 +17,16 @@
     To:<select name="advisorSelection" required="required">
         <option disabled selected value> -- select an option -- </option>
         <?php
+        $servername = "localhost";
+        $username = "amstg";
+        $password = "seas";
+        $dbname = "amstg";
 
+
+        $conn = mysqli_connect($servername, $username, $password, $dbname);
+        if(!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
         $yquery = "SELECT *  FROM personnel WHERE personnelType='V'";
         $yresult = $conn->query($yquery) or die("mysql error".$mysqli->error);
 
