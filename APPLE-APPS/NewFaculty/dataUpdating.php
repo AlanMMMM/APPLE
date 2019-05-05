@@ -88,7 +88,7 @@ if ($conn->connect_error) {
      if(isset($_POST['searchLN'])){
          $searchq = $_POST['searchLN'];
 
-         $sQuery = "SELECT * FROM applicant A, application B, recommendation C WHERE A.last_name=$searchq AND A.uid=B.uid AND A.uid=C.uid";
+         $sQuery = "SELECT * FROM applicant A, application B, recommendation C WHERE A.last_name='$searchq' AND A.uid=B.uid AND A.uid=C.uid";
          $sResult = $conn->query($sQuery) or die("mysql error".$mysqli->error);
          if($sResult->num_rows==0)
          {
