@@ -85,7 +85,7 @@ if(isset($_POST['semester'])){
     $oResult= $conn->query($oQuery) or die("mysql error".$mysqli->error);
     echo "Total Number Of Applicants of ".$selectq." Semester: ";
     while($oRow = $oResult->fetch_assoc()){
-        echo $oRow["applicantNumber"]."<br>";
+        echo $oRow["applicantsNumber"]."<br>";
     }
 
     $pQuery= "SELECT COUNT(A.uid) AS admissionNumber FROM application A, applicant B WHERE A.app_terrm='$selectq' AND A.uid=B.uid AND (B.decision=1 OR B.decision=2)";
@@ -102,14 +102,14 @@ if(isset($_POST['semester'])){
         echo $qRow["rejectNumber"]."<br>";
     }
 
-    $rQuery= "SELECT AVG(A.GRE_quantitative) AS avgGreQuan FROM application A, applicant B WHERE A.app_terrm='$selectq' AND A.uid=B.uid AND (B.decision=1 OR B.decision=2)";
+    $rQuery= "SELECT AVG(A.GRE_quantitative) AS avgGreQuan FROM application A, applicant B WHERE A.app_term='$selectq' AND A.uid=B.uid AND (B.decision=1 OR B.decision=2)";
     $rResult= $conn->query($rQuery) or die("mysql error".$mysqli->error);
     echo "Average GRE Quantitative Score Of Admitted Applicants of ".$selectq." Semester: ";
     while($rRow = $rResult->fetch_assoc()){
         echo $rRow["avgGreQuan"]."<br>";
     }
 
-    $sQuery= "SELECT AVG(A.GRE_math) AS avgGreMath FROM application A, applicant B WHERE A.app_terrm='$selectq' AND A.uid=B.uid AND (B.decision=1 OR B.decision=2)";
+    $sQuery= "SELECT AVG(A.GRE_math) AS avgGreMath FROM application A, applicant B WHERE A.app_term='$selectq' AND A.uid=B.uid AND (B.decision=1 OR B.decision=2)";
     $sResult= $conn->query($sQuery) or die("mysql error".$mysqli->error);
     echo "Average GRE Math Score Of Admitted Applicants of ".$selectq." Semester: ";
     while($sRow = $sResult->fetch_assoc()){
@@ -126,31 +126,31 @@ if(isset($_POST['semester'])){
     $oResult= $conn->query($oQuery) or die("mysql error".$mysqli->error);
     echo "Total Number Of Applicants of ".$selectq." : ";
     while($oRow = $oResult->fetch_assoc()){
-        echo $oRow["applicantNumber"]."<br>";
+        echo $oRow["applicantsNumber"]."<br>";
     }
 
-    $pQuery= "SELECT COUNT(A.uid) AS admissionNumber FROM application A, applicant B WHERE A.app_year='$selectq' AND A.uid=B.uid AND (B.decision=1 OR B.decision=2)";
+    $pQuery= "SELECT COUNT(A.uid) AS admissionNumber FROM application A, applicant B WHERE A.app_year=$selectq AND A.uid=B.uid AND (B.decision=1 OR B.decision=2)";
     $pResult= $conn->query($pQuery) or die("mysql error".$mysqli->error);
     echo "Total Number Of Admitted Applicants of ".$selectq." : ";
     while($pRow = $pResult->fetch_assoc()){
         echo $pRow["admissionNumber"]."<br>";
     }
 
-    $qQuery= "SELECT COUNT(A.uid) AS rejectNumber FROM application A, applicant B WHERE A.app_year='$selectq' AND A.uid=B.uid AND B.decision=3";
+    $qQuery= "SELECT COUNT(A.uid) AS rejectNumber FROM application A, applicant B WHERE A.app_year=$selectq AND A.uid=B.uid AND B.decision=3";
     $qResult= $conn->query($qQuery) or die("mysql error".$mysqli->error);
     echo "Total Number Of Rejected Applicants of ".$selectq." : ";
     while($qRow = $qResult->fetch_assoc()){
         echo $qRow["rejectNumber"]."<br>";
     }
 
-    $rQuery= "SELECT AVG(A.GRE_quantitative) AS avgGreQuan FROM application A, applicant B WHERE A.app_year='$selectq' AND A.uid=B.uid AND (B.decision=1 OR B.decision=2)";
+    $rQuery= "SELECT AVG(A.GRE_quantitative) AS avgGreQuan FROM application A, applicant B WHERE A.app_year=$selectq AND A.uid=B.uid AND (B.decision=1 OR B.decision=2)";
     $rResult= $conn->query($rQuery) or die("mysql error".$mysqli->error);
     echo "Average GRE Quantitative Score Of Admitted Applicants of ".$selectq." : ";
     while($rRow = $rResult->fetch_assoc()){
         echo $rRow["avgGreQuan"]."<br>";
     }
 
-    $sQuery= "SELECT AVG(A.GRE_math) AS avgGreMath FROM application A, applicant B WHERE A.app_year='$selectq' AND A.uid=B.uid AND (B.decision=1 OR B.decision=2)";
+    $sQuery= "SELECT AVG(A.GRE_math) AS avgGreMath FROM application A, applicant B WHERE A.app_year=$selectq AND A.uid=B.uid AND (B.decision=1 OR B.decision=2)";
     $sResult= $conn->query($sQuery) or die("mysql error".$mysqli->error);
     echo "Average GRE Math Score Of Admitted Applicants of ".$selectq." : ";
     while($sRow = $sResult->fetch_assoc()){
@@ -167,7 +167,7 @@ if(isset($_POST['semester'])){
     $oResult = $conn->query($oQuery) or die("mysql error" . $mysqli->error);
     echo "Total Number Of Applicants of " . $selectq . " Major: ";
     while ($oRow = $oResult->fetch_assoc()) {
-        echo $oRow["applicantNumber"] . "<br>";
+        echo $oRow["applicantsNumber"] . "<br>";
     }
 
     $pQuery = "SELECT COUNT(A.uid) AS admissionNumber FROM application A, applicant B WHERE A.area_of_interest='$selectq' AND A.uid=B.uid AND (B.decision=1 OR B.decision=2)";
