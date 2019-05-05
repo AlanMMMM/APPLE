@@ -50,7 +50,7 @@ session_start();
       $TOEFL_year = $_POST['TOEFL_year'];
       $GRE_score = $_POST['GRE_score'];
       $errCheck = 0;
-      
+
       
       // Input check
 
@@ -182,14 +182,15 @@ session_start();
 // use wordwrap() if lines are longer than 70 characters
           $msg3= wordwrap($msg3,70);
 // send email
-          $mail3=mail($rec_email3,"Recommendation Letter Request",$msg);
+          $mail3=mail($rec_email3,"Recommendation Letter Request",$msg3);
 
-          if($mail1&&$mail2&&$mail3&&$errCheck == 2){
-      echo '<br />Thanks for submitting the application <br />';
+          if(!$mail1||!$mail2||!$mail3||$errCheck != 2){
+
+              echo "There was a problem submiting your application, please try again or contact an administrator for assistance.\n" . $errCheck.$mail1.$mail2.$mail3;
       }
       else{
-        echo "There was a problem submiting your application, please try again or contact an administrator for assistance.\n" . $errCheck.$mail1.$mail2.$mail3;
 
+          echo '<br />Thanks for submitting the application <br />';
       }
 
 }
