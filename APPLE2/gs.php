@@ -31,6 +31,10 @@
     <input type="submit" value="View Courses" />
 </form>
 
+        <form action="toolsGS.php">
+            <input type="submit" value="List Tool" />
+        </form>
+
 <form action="gsEnroll.php">
 	    	<input type="submit" value="View Enrolled Courses" />
 		</form>

@@ -11,9 +11,9 @@ session_start();
 <body>
 <h1>Your Payment Info:</h1>
 <form method="POST" action="paymentProcess.php">
-    Cardholder First Name:  <input type="text" required="required" name="chfn" maxlength="15">
-    Cardholder Last Name:  <input type="text" required="required" name="chln" maxlength="15">
-    Cardnumber:  <input type="number" required="required" name="cn" minlength="16" maxlength="16">
+    Cardholder First Name:  <input type="text" required="required" name="chfn" maxlength=15>
+    Cardholder Last Name:  <input type="text" required="required" name="chln" maxlength=15>
+    Cardnumber:  <input type="number" required="required" name="cn" minlength=16 maxlength=16>
     Experiration Month: <select name="edm" required="required">
         <option disabled selected value> -- select an option -- </option>
         <option value="1">01</option>
@@ -44,8 +44,8 @@ session_start();
         <option value="11">2029</option>
         <option value="12">2030</option>
     </select><br>
-    CVV:  <input type="number" required="required" name="cvv" minlength="3" maxlength="3">
-    Zip Code: <input type="number" required="required" name="zc" minlength="5" maxlength="5">
+    CVV:  <input type="number" required="required" name="cvv" minlength=3 maxlength=3>
+    Zip Code: <input type="number" required="required" name="zc" minlength=5 maxlength=5>
     <input type="submit" value="submit" >
 </form>
 

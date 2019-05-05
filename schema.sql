@@ -29,6 +29,7 @@ CREATE TABLE applicant(
   last_name varchar(15) not null,
   uid int,
   app_status varchar(25) not null,
+
   transcript_received varchar(15) not null default 'No',
   rec_received varchar(15) not null default 'No',
   decision int default 0,
@@ -66,7 +67,9 @@ CREATE TABLE application(
   zip int,
   email varchar(25),
   app_term varchar(10),
+  app_year int(4) not null,
   GRE_verbal int,
+
   GRE_quantitative int,
   exam_year int,
   GRE_score int,
@@ -92,7 +95,7 @@ CREATE TABLE application(
 
 
 INSERT INTO user VALUES('jlennon','54321','student',55555555);  
-INSERT INTO application VALUES (55555555,'111111111','123 spring st','new york','NY',10002,'abcde@abcde.com','FALL',180,180,2017,200,"physics",100,2018,'GWU','BS','CS',2019,3.0,NULL,NULL,NULL,NULL,NULL,'CS','master');
+INSERT INTO application VALUES (55555555,'111111111','123 spring st','new york','NY',10002,'abcde@abcde.com','FALL',2019,180,180,2017,200,"physics",100,2018,'GWU','BS','CS',2019,3.0,NULL,NULL,NULL,NULL,NULL,'CS','master');
 INSERT INTO applicant VALUES ('John','Lennon',55555555,'completed','Yes','Yes',NULL,NULL,NULL,NULL,NULL,NULL,0,0);
 
 
@@ -115,9 +118,9 @@ INSERT INTO applicant VALUES ('tom','ford',2,'completed','Yes','Yes',NULL,NULL,N
 INSERT INTO applicant VALUES ('tony','allen',3,'pending','Yes','No',NULL,NULL,NULL,NULL,NULL,NULL,0,0);
 INSERT INTO recommendation VALUES (1,'Tim','Wood','professor','Rick is a great student',0,NULL,NULL,1);
 INSERT INTO recommendation VALUES (2,'Tim','Wood','professor','Tom is a great student as well',0,NULL,NULL,2);
-INSERT INTO application VALUES (1,'123456789','123 spring st','new york','NY',10002,'abcde@abcde.com','FALL',180,180,2017,180,"physics",100,2018,'GWU','BS','CS',2019,3.0,NULL,NULL,NULL,NULL,NULL,'CS','master');
-INSERT INTO application VALUES (2,'123456788','123 summer rd','washington','DC',20016,'abcdef@abcdef.com','FALL',170,170,2018,170,"physics",100,2018,'GWU','BA','CS',2019,4.0,NULL,NULL,NULL,NULL,NULL,'CS','phd');
-INSERT INTO application VALUES (3,'123456787','123 fall blvd','miami','FL',30002,'abcdefg@abcdefg.com','FALL',160,160,2018,160,"physics",100,2018,'GWU','BS','MATH',2019,3.5,NULL,NULL,NULL,NULL,NULL,'CS','phd');
+INSERT INTO application VALUES (1,'123456789','123 spring st','new york','NY',10002,'abcde@abcde.com','FALL',2019,180,180,2017,180,"physics",100,2018,'GWU','BS','CS',2019,3.0,NULL,NULL,NULL,NULL,NULL,'CS','master');
+INSERT INTO application VALUES (2,'123456788','123 summer rd','washington','DC',20016,'abcdef@abcdef.com','FALL',2020,170,170,2018,170,"physics",100,2018,'GWU','BA','CS',2019,4.0,NULL,NULL,NULL,NULL,NULL,'CS','phd');
+INSERT INTO application VALUES (3,'123456787','123 fall blvd','miami','FL',30002,'abcdefg@abcdefg.com','FALL',2020,160,160,2018,160,"physics",100,2018,'GWU','BS','MATH',2019,3.5,NULL,NULL,NULL,NULL,NULL,'CS','phd');
 
 
 
@@ -133,14 +136,15 @@ create table student (
   passwrd   varchar(20) not null,
   sID  int(8) not null,
   program  varchar(20) not null,
-  address  varchar(20) not null
+  address  varchar(20) not null,
+  app_year int(4)
   );
 
-INSERT INTO student VALUES ('Brian', 'Morgan', 'blmorgan', 'blmorgan@gwu.edu','Dawn Ginetti',0, 'abc123', 12345678, 'cs', 'pasadena');
-INSERT INTO student VALUES ('Robert', 'Gordon', 'rmgordon', 'rmgordon@gwu.edu','Dawn Ginetti',0,  'def456', 30043201, 'cs', 'district');
-INSERT INTO student VALUES ('Jae', 'Souk', 'jsouk', 'jsouk@gwu.edu','Dawn Ginetti',0,  'ghi789', 43318703, 'cs', 'fulton');
-INSERT INTO student VALUES ('Billie', 'Holiday', 'bholiday', 'bholiday@gwu.edu', 'Dawn Ginetti',0, '12345', 88888888, 'cs', 'Washington DC');
-INSERT INTO student VALUES ('Diana', 'Krall', 'dkrall', 'dkrall@gwu.edu','Dawn Ginetti',0, '09876', 99999999, 'cs', 'New York');
+INSERT INTO student VALUES ('Brian', 'Morgan', 'blmorgan', 'blmorgan@gwu.edu','Dawn Ginetti',0, 'abc123', 12345678, 'cs', 'pasadena',2019);
+INSERT INTO student VALUES ('Robert', 'Gordon', 'rmgordon', 'rmgordon@gwu.edu','Dawn Ginetti',0,  'def456', 30043201, 'cs', 'district',2019);
+INSERT INTO student VALUES ('Jae', 'Souk', 'jsouk', 'jsouk@gwu.edu','Dawn Ginetti',0,  'ghi789', 43318703, 'cs', 'fulton',2019);
+INSERT INTO student VALUES ('Billie', 'Holiday', 'bholiday', 'bholiday@gwu.edu', 'Dawn Ginetti',0, '12345', 88888888, 'cs', 'Washington DC',2019);
+INSERT INTO student VALUES ('Diana', 'Krall', 'dkrall', 'dkrall@gwu.edu','Dawn Ginetti',0, '09876', 99999999, 'cs', 'New York',2019);
 
 
   create table personnel (

@@ -28,11 +28,12 @@ if ($conn->connect_error) {
         if($pResult==TRUE) {
             $fname=$row['first_name'];
             $lname=$row['last_name'];
+            $appyear=$row['app_year'];
             $username=$rowUser['username'];
             $email=$rowApp['email'];
             $password=$rowUser['password'];
             $city=$rowApp['city'];
-            $sQuery = "INSERT INTO student VALUES ('$fname', '$lname', '$username', '$email','Dawn Ginetti',1, '$password', $uid, 'cs', '$city')";
+            $sQuery = "INSERT INTO student VALUES ('$fname', '$lname', '$username', '$email','Dawn Ginetti',1, '$password', $uid, 'cs', '$city',$appyear)";
             $sResult=$conn->query($sQuery) or die("mysql error".$mysqli->error);
             echo "Payment Received!";
             echo " <input type=button onClick=\"location.href='../../APPLE2/login.php'\" value='Student Portal'>";
