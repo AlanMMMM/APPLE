@@ -54,8 +54,8 @@ CREATE TABLE applicant(
   rec_generic varchar(1),
   rec_credible varchar(1),
   uid int,
-  PRIMARY KEY(rid),
- 
+  PRIMARY KEY(rid)
+
   );
 
 CREATE TABLE application(
