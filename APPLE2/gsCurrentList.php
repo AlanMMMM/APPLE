@@ -17,7 +17,15 @@
     Generate List By Admission Year: <select name="yearSelection" required="required">
         <option disabled selected value> -- select an option -- </option>
         <?php
+        $servername= "localhost";
+        $username = "amstg";
+        $password = "seas";
+        $dbname = "amstg";
 
+        $conn = new mysqli($servername,$username,$password,$dbname);
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
         $yquery = "SELECT DISTINCT app_year FROM student";
         $yresult = $conn->query($yquery) or die("mysql error".$mysqli->error);
 

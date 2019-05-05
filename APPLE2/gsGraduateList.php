@@ -25,7 +25,7 @@
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
-        $squery = "SELECT DISTINCT app_term FROM applicantion A WHERE A.degree_seeking='master'";
+        $squery = "SELECT DISTINCT app_term FROM application A WHERE A.degree_seeking='master'";
         $sresult = $conn->query($squery) or die("mysql error".$mysqli->error);
 
         while($srow = mysqli_fetch_assoc($sresult)){
@@ -45,7 +45,7 @@
         <option disabled selected value> -- select an option -- </option>
         <?php
 
-        $yquery = "SELECT DISTINCT app_year FROM applicantion WHERE degree_seeking='master'";
+        $yquery = "SELECT DISTINCT app_year FROM application WHERE degree_seeking='master'";
         $yresult = $conn->query($yquery) or die("mysql error".$mysqli->error);
 
         while($yrow = mysqli_fetch_assoc($yresult)){
@@ -63,7 +63,7 @@
         <option disabled selected value> -- select an option -- </option>
         <?php
 
-        $mquery = "SELECT DISTINCT area_of_interest FROM applicantion WHERE degree_seeking='master'";
+        $mquery = "SELECT DISTINCT area_of_interest FROM application WHERE degree_seeking='master'";
         $mresult = $conn->query($mquery) or die("mysql error".$mysqli->error);
 
         while($mrow = mysqli_fetch_assoc($mresult)){
