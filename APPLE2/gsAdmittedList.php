@@ -84,7 +84,7 @@ if(isset($_POST['semester'])){
 
     $oResult= $conn->query($oQuery) or die("mysql error".$mysqli->error);
     echo "Graduate Applicant List of ".$selectq." Semester:<br>";
-    while($oRow = mysqli_fetch_assoc(oResult)){
+    while($oRow = mysqli_fetch_assoc($oResult)){
         echo $oRow["first_name"]." ".$oRow["last_name"]." ".$oRow["uid"]."<br>";
     }
 }else if(isset($_POST['year'])){
@@ -94,7 +94,7 @@ if(isset($_POST['semester'])){
 
     $oResult= $conn->query($oQuery) or die("mysql error".$mysqli->error);
     echo "Graduate Applicant List of ".$selectq." Year:<br>";
-    while($oRow = mysqli_fetch_assoc(oResult)){
+    while($oRow = mysqli_fetch_assoc($oResult)){
         echo $oRow["first_name"]." ".$oRow["last_name"]." ".$oRow["uid"]."<br>";
     }
 }else if(isset($_POST['major'])){
@@ -104,7 +104,7 @@ if(isset($_POST['semester'])){
 
     $oResult= $conn->query($oQuery) or die("mysql error".$mysqli->error);
     echo "Graduate Applicant List of ".$selectq." Degree Program:<br>";
-    while($oRow = mysqli_fetch_assoc(oResult)){
+    while($oRow = mysqli_fetch_assoc($oResult)){
         echo $oRow["first_name"]." ".$oRow["last_name"]." ".$oRow["uid"]."<br>";
     }
 }

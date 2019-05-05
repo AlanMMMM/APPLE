@@ -84,7 +84,7 @@ $oQuery= "SELECT * FROM application A WHERE A.app_term='$selectq' AND A.degree_s
 
 $oResult= $conn->query($oQuery) or die("mysql error".$mysqli->error);
 echo "Graduate Applicant List of ".$selectq." Semester:<br>";
-while($oRow = mysqli_fetch_assoc(oResult)){
+while($oRow = mysqli_fetch_assoc($oResult)){
     echo $oRow["first_name"]." ".$oRow["last_name"]." ".$oRow["uid"]."<br>";
     }
 }else if(isset($_POST['year'])){
@@ -94,7 +94,7 @@ while($oRow = mysqli_fetch_assoc(oResult)){
 
         $oResult= $conn->query($oQuery) or die("mysql error".$mysqli->error);
         echo "Graduate Applicant List of ".$selectq." Year:<br>";
-        while($oRow = mysqli_fetch_assoc(oResult)){
+        while($oRow = mysqli_fetch_assoc($oResult)){
             echo $oRow["first_name"]." ".$oRow["last_name"]." ".$oRow["uid"]."<br>";
         }
     }else if(isset($_POST['major'])){
@@ -104,7 +104,7 @@ while($oRow = mysqli_fetch_assoc(oResult)){
 
         $oResult= $conn->query($oQuery) or die("mysql error".$mysqli->error);
         echo "Graduate Applicant List of ".$selectq." Degree Program:<br>";
-        while($oRow = mysqli_fetch_assoc(oResult)){
+        while($oRow = mysqli_fetch_assoc($oResult)){
             echo $oRow["first_name"]." ".$oRow["last_name"]." ".$oRow["uid"]."<br>";
         }
     }
