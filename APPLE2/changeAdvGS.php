@@ -59,9 +59,10 @@ if(isset($_POST['changeAdv'])) {
     } else {
         $pQuery = "UPDATE student SET advisor='$advnameq' WHERE sID=$sidq";
         $pResult = $conn->query($pQuery) or die("mysql error" . $mysqli->error);
-        echo "Total Number Of Admitted Applicants of " . $selectq . " Semester: ";
-        while ($pRow = $pResult->fetch_assoc()) {
-            echo $pRow["admissionNumber"] . "<br>";
+       if($pResult=TRUE)
+       {
+
+            echo "Updated Successfully!";
         }
     }
 
