@@ -92,7 +92,7 @@ session_start();
       $num = mysqli_num_rows($result);
       
       if($num > 0){
-        die("You have already sent an application.");
+        die("There is an Application on File, You can Edit your application on home page.");
         echo "<input type=button onClick=\"location.href='mainpage.php'\" value='Back to home page'>";
       }
       
@@ -110,53 +110,7 @@ session_start();
 
       
       
-      if(empty($_POST['GRE_score'])){
-        $GRE_score = "NULL";
-      }
-      
-      if(empty($_POST['masters_gpa'])){
-        $masters_gpa = "NULL";
-      }
-      
-      if(empty($_POST['masters_year'])){
-        $masters_year = "NULL";
-      }
-      
-      if(empty($_POST['TOEFL'])){
-        $TOEFL = "NULL";
-      }
-      
-      if(empty($_POST['TOEFL_year'])){
-        $TOEFL_year = "NULL";
-      }
-      
-        $query = "INSERT INTO application (uid,ssn,street,city,state,zip,email,app_term,app_year,GRE_verbal,GRE_quantitative,exam_year,bachelor_school,bachelor_degree,bachelor_major,bachelor_year,bachelor_gpa,area_of_interest, degree_seeking, TOEFL_year, TOEFL_score,GRE_subject,GRE_score,masters_school,masters_degree,masters_major,masters_year,masters_gpa) VALUES ($uid, '$ssn', '$street', '$city', '$state', '$zip', '$email', '$app_term',$app_year, $GRE_verbal, $GRE_quantitative, $GRE_year, '$bachelor_school', '$bachelor_degree', '$bachelor_major', $bachelor_year, $bachelor_gpa, '$area_of_interest', '$degree', $TOEFL_year, $TOEFL,'$GRE_subject',$GRE_score,'$masters_school','$masters_degree','$masters_major',$masters_year,$masters_gpa);";
-      
-      
-      
-      $result	=	mysqli_query($conn,$query);
-      
-      if	($result)	{	
-        $errCheck++;
-        //echo		"New	record	created	successfully	<br/>";	
-      }	
-      else	{	
-        echo "Error:	"	.	$query	.	"<br/>"	.	mysqli_error($conn);	
-      }
-      
-      
-      $query = "INSERT INTO applicant (first_name,last_name,uid,app_status) VALUES ('$first_name','$last_name',$uid,'pending');";
-      
-      $result	=	mysqli_query($conn,$query);
-      
-      if	($result)	{	
-        $errCheck++;
-        //echo		"New	record	created	successfully	<br/>";	
-      }	
-      else	{	
-        echo "Error:	"	.	$query	.	"<br/>"	.	mysqli_error($conn);	
-      }
-      
+
       
       
 
@@ -184,13 +138,62 @@ session_start();
 // send email
           $mail3=mail($rec_email3,"Recommendation Letter Request",$msg3);
 
-          if(!$mail1||!$mail2||!$mail3||$errCheck != 2){
+          if(!$mail1||!$mail2||!$mail3){
 
-              echo "There was a problem submiting your application, please try again or contact an administrator for assistance.\n" . $errCheck.$mail1.$mail2.$mail3;
+              echo "There was a problem sending recommendation invitaiton, please try again or contact an administrator for assistance.\n" . $mail1.$mail2.$mail3;
       }
       else{
+          if(empty($_POST['GRE_score'])){
+              $GRE_score = "NULL";
+          }
 
-          echo '<br />Thanks for submitting the application <br />';
+          if(empty($_POST['masters_gpa'])){
+              $masters_gpa = "NULL";
+          }
+
+          if(empty($_POST['masters_year'])){
+              $masters_year = "NULL";
+          }
+
+          if(empty($_POST['TOEFL'])){
+              $TOEFL = "NULL";
+          }
+
+          if(empty($_POST['TOEFL_year'])){
+              $TOEFL_year = "NULL";
+          }
+
+          $query = "INSERT INTO application (uid,ssn,street,city,state,zip,email,app_term,app_year,GRE_verbal,GRE_quantitative,exam_year,bachelor_school,bachelor_degree,bachelor_major,bachelor_year,bachelor_gpa,area_of_interest, degree_seeking, TOEFL_year, TOEFL_score,GRE_subject,GRE_score,masters_school,masters_degree,masters_major,masters_year,masters_gpa) VALUES ($uid, '$ssn', '$street', '$city', '$state', '$zip', '$email', '$app_term',$app_year, $GRE_verbal, $GRE_quantitative, $GRE_year, '$bachelor_school', '$bachelor_degree', '$bachelor_major', $bachelor_year, $bachelor_gpa, '$area_of_interest', '$degree', $TOEFL_year, $TOEFL,'$GRE_subject',$GRE_score,'$masters_school','$masters_degree','$masters_major',$masters_year,$masters_gpa);";
+
+
+
+          $result	=	mysqli_query($conn,$query);
+
+          if	($result)	{
+              $errCheck++;
+              //echo		"New	record	created	successfully	<br/>";
+          }
+          else	{
+              echo "Error:	"	.	$query	.	"<br/>"	.	mysqli_error($conn);
+          }
+
+
+          $query = "INSERT INTO applicant (first_name,last_name,uid,app_status) VALUES ('$first_name','$last_name',$uid,'pending');";
+
+          $result	=	mysqli_query($conn,$query);
+
+          if	($result)	{
+              $errCheck++;
+              //echo		"New	record	created	successfully	<br/>";
+          }
+          else	{
+              echo "Error:	"	.	$query	.	"<br/>"	.	mysqli_error($conn);
+          }
+          if($errCheck==2) {
+              echo '<br />Thanks for submitting the application <br />';
+          }else{
+              echo "error submitting the application form";
+          }
       }
 
 }
