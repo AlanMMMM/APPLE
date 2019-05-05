@@ -33,7 +33,7 @@ $dbname = "amstg";
 
       // define the sql_insert_query
       
-      $query = "INSERT INTO recommendation (rec_fname, rec_lname, rec_title,rec_letter,uid) VALUES ($fname,$lname,$title,$rec,$id_num)";
+      $query = "INSERT INTO recommendation (rec_fname, rec_lname, rec_title,rec_letter,uid) VALUES ($fname,$lname,$title,$recommendation,$id_num)";
       
       $result	=	mysqli_query($conn,$query);
       
