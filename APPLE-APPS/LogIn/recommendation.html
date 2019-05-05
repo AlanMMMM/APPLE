@@ -7,8 +7,10 @@
   <h2>Send a recommendation by filling out this form</h2>
 
   <form method="post" action="recommendation.php" id = "rec_form">
-    <label for="id_num">Id number:</label>
-    <input type="number" name="id_num" /><br /><br />
+    Student Id number(referred in Email):<input type="number" name="id_num" required="required" max="99999999"/><br /><br />
+    Your First Name:<input type="text" name="fname" required="required" maxlength="25"/><br /><br />
+    Your Last Name:<input type="number" name="lname" required="required" maxlength="25"/><br /><br />
+    Your Work Position:<input type="number" name="title" required="required" maxlength="25"/><br /><br />
     Write recommendation here: <br /> 
       <textarea name="rec" maxlength = 4096 rows = "10" cols = "100" form="rec_form"></textarea><br />
     

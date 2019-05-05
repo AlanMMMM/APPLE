@@ -34,6 +34,9 @@
  <form action="form.php">
     <input type="submit" value="Registration Form" />
 </form>
+        <form method="post" action="transcript.php">
+            <input type="submit" value="View Transcript"/><br>
+        </form>
 
 	</body>
 </html>

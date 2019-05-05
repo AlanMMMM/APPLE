@@ -39,11 +39,14 @@ session_start();
       $GRE_year = $_POST['GRE_year'];
       $GRE_subject = $_POST['GRE_subject'];
       $TOEFL = $_POST['TOEFL'];
-      $rec_fname = $_POST['rec_fname'];
-      $rec_lname = $_POST['rec_lname'];
-      $rec_title = $_POST['rec_title'];
-      $rec_email = $_POST['rec_email'];
-      $uid = $_SESSION["uid"];
+
+      $rec_email1 = $_POST['rec_email1'];
+
+    $rec_email2 = $_POST['rec_email2'];
+
+    $rec_email3 = $_POST['rec_email3'];
+
+    $uid = $_SESSION["uid"];
       $TOEFL_year = $_POST['TOEFL_year'];
       $GRE_score = $_POST['GRE_score'];
       $errCheck = 0;
@@ -98,7 +101,7 @@ session_start();
       
       if($num > 0){
         die("You have already sent an application.");
-        //<input type=button onClick="location.href='mainpage.php'" value='Back to home page'>"
+        echo "<input type=button onClick=\"location.href='mainpage.php'\" value='Back to home page'>";
       }
       
       
@@ -109,17 +112,10 @@ session_start();
       
 
       
-      $query = "INSERT INTO recommendation (rec_fname,rec_lname,rec_title,uid) VALUES ('$rec_fname','$rec_lname','$rec_title',$uid);";
-      
-      $result	=	mysqli_query($conn,$query);
-      
-      if	($result)	{	
-        $errCheck++;
-        //echo		"New	record	created	successfully	<br/>";	
-      }	
-      else	{	
-        echo "Error:	"	.	$query	.	"<br/>"	.	mysqli_error($conn);	
-      }
+
+
+
+
       
       
       if(empty($_POST['GRE_score'])){
@@ -171,37 +167,36 @@ session_start();
       
       
       
-      if($errCheck == 3){
-      
-      $query = "SELECT max(rid) FROM recommendation;";
- 
-   $result = mysqli_query($conn,$query);
-   if($result){
-
-   $row = mysqli_fetch_array($result);
-   $rid = $row['max(rid)'];
-   
-   }   
-      	
-    
-
-      $msg = "Send a recommendation for " . $first_name . " " . $last_name . " by following the link below: \n" . "Id number is: " . $rid . " \n" . "http://gwupyterhub.seas.gwu.edu/~sp19DBp2-404TeamNotFound/404TeamNotFound/APPLE-APPS/LogIn/recommendation.html";
 
 
 
-
+   $msg1 = "Send a recommendation for " . $first_name . " " . $last_name . " by following the link below: \n" . "Student Id number is: " . $uid . " \n" . "http://gwupyterhub.seas.gwu.edu/~sp19DBp2-404TeamNotFound/404TeamNotFound/APPLE-APPS/LogIn/recommendation.html";
 // use wordwrap() if lines are longer than 70 characters
-$msg = wordwrap($msg,70);
-
+    $msg1 = wordwrap($msg1,70);
 // send email
-mail($rec_email,"Recommendation Letter Request",$msg);
+    $mail1=mail($rec_email1,"Recommendation Letter Request",$msg1);
 
 
-     
+
+          $msg2 = "Send a recommendation for " . $first_name . " " . $last_name . " by following the link below: \n" . "Student Id number is: " . $uid . " \n" . "http://gwupyterhub.seas.gwu.edu/~sp19DBp2-404TeamNotFound/404TeamNotFound/APPLE-APPS/LogIn/recommendation.html";
+// use wordwrap() if lines are longer than 70 characters
+          $msg2 = wordwrap($msg2,70);
+// send email
+          $mail2=mail($rec_email2,"Recommendation Letter Request",$msg2);
+
+
+
+          $msg3 = "Send a recommendation for " . $first_name . " " . $last_name . " by following the link below: \n" . "Student Id number is: " . $uid . " \n" . "http://gwupyterhub.seas.gwu.edu/~sp19DBp2-404TeamNotFound/404TeamNotFound/APPLE-APPS/LogIn/recommendation.html";
+// use wordwrap() if lines are longer than 70 characters
+          $msg3= wordwrap($msg3,70);
+// send email
+          $mail3=mail($rec_email3,"Recommendation Letter Request",$msg);
+
+          if($mail1&&$mail2&&$mail3&&$errCheck == 2){
       echo '<br />Thanks for submitting the application <br />';
       }
       else{
-        echo "There was a problem submiting your application, please try again or contact an administrator for assistance.\n" . $errCheck;
+        echo "There was a problem submiting your application, please try again or contact an administrator for assistance.\n" . $errCheck.$mail1.$mail2.$mail3;
 
       }
 

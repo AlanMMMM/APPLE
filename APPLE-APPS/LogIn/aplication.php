@@ -80,16 +80,21 @@ echo "<br />";
     <input type="number" name="TOEFL" /><br />
     <label for="TOEFL_year">TOEFL year:</label>
     <input type="number" name="TOEFL_year" /><br />
-    <p> Recommendation Letter: </p>
-    <label for="rec_fname">Recommender's first name:</label>
-    <input type="text" name="rec_fname" /><br />
-    <label for="rec_lname">Recommender's last name:</label>
-    <input type="text" name="rec_lname" /><br />
-    <label for="rec_title">Recommender's title:</label>
-    <input type="text" name="rec_title" /><br />
+
+      <p> Recommendation Letter 1: </p>
+
     <label for="rec_email">Recommender's email:</label>
-    <input type="text" name="rec_email" /><br />
-    
+    <input type="text" name="rec_email1" /><br />
+
+      <p> Recommendation Letter 2: </p>
+
+      <label for="rec_email">Recommender's email:</label>
+      <input type="text" name="rec_email2" /><br />
+
+      <p> Recommendation Letter 3: </p>
+
+      <label for="rec_email">Recommender's email:</label>
+      <input type="text" name="rec_email3" /><br />
     
 
     <input type="submit" value="Submit Application" name="submit" /><br/><br/>
