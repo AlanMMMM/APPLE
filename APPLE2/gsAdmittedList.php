@@ -25,7 +25,7 @@
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
-        $squery = "SELECT DISTINCT app_term FROM application A, applicant B WHERE B.decision=1 OR B.decision=2 AND A.uid=B.uid";
+        $squery = "SELECT DISTINCT A.app_term FROM application A, applicant B WHERE (B.decision=1 OR B.decision=2) AND A.uid=B.uid";
         $sresult = $conn->query($squery) or die("mysql error".$mysqli->error);
 
         while($srow = mysqli_fetch_assoc($sresult)){
@@ -45,7 +45,7 @@
         <option disabled selected value> -- select an option -- </option>
         <?php
 
-        $yquery = "SELECT DISTINCT app_year FROM application A, applicant B WHERE B.decision=1 OR B.decision=2 AND A.uid=B.uid";
+        $yquery = "SELECT DISTINCT A.app_year FROM application A, applicant B WHERE (B.decision=1 OR B.decision=2) AND A.uid=B.uid";
         $yresult = $conn->query($yquery) or die("mysql error".$mysqli->error);
 
         while($yrow = mysqli_fetch_assoc($yresult)){
@@ -63,7 +63,7 @@
         <option disabled selected value> -- select an option -- </option>
         <?php
 
-        $mquery = "SELECT DISTINCT area_of_interest FROM application A, applicant B WHERE B.decision=1 OR B.decision=2 AND A.uid=B.uid";
+        $mquery = "SELECT DISTINCT A.area_of_interest FROM application A, applicant B WHERE (B.decision=1 OR B.decision=2) AND A.uid=B.uid";
         $mresult = $conn->query($mquery) or die("mysql error".$mysqli->error);
 
         while($mrow = mysqli_fetch_assoc($mresult)){

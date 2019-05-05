@@ -80,7 +80,7 @@
 if(isset($_POST['semester'])){
 $selectq=$_POST['semesterSelection'];
 
-$oQuery= "SELECT * FROM application A WHERE A.app_term='$selectq' AND A.degree_seeking='master'";
+$oQuery= "SELECT * FROM application A, applicant B WHERE A.app_term='$selectq' AND A.degree_seeking='master' AND A.uid=B.uid";
 
 $oResult= $conn->query($oQuery) or die("mysql error".$mysqli->error);
 echo "Graduate Applicant List of ".$selectq." Semester:<br>";
@@ -90,7 +90,7 @@ while($oRow = mysqli_fetch_assoc($oResult)){
 }else if(isset($_POST['year'])){
         $selectq=$_POST['yearSelection'];
 
-        $oQuery= "SELECT * FROM application A WHERE A.app_year=$selectq AND A.degree_seeking='master'";
+        $oQuery= "SELECT * FROM application A, applicant B WHERE A.app_year=$selectq AND A.degree_seeking='master' AND A.uid=B.uid";
 
         $oResult= $conn->query($oQuery) or die("mysql error".$mysqli->error);
         echo "Graduate Applicant List of ".$selectq." Year:<br>";
@@ -100,7 +100,7 @@ while($oRow = mysqli_fetch_assoc($oResult)){
     }else if(isset($_POST['major'])){
         $selectq=$_POST['majorSelection'];
 
-        $oQuery= "SELECT * FROM application A WHERE A.area_of_interest='$selectq' AND A.degree_seeking='master'";
+        $oQuery= "SELECT * FROM application A, applicant B WHERE A.area_of_interest='$selectq' AND A.degree_seeking='master' AND A.uid=B.uid";
 
         $oResult= $conn->query($oQuery) or die("mysql error".$mysqli->error);
         echo "Graduate Applicant List of ".$selectq." Degree Program:<br>";
