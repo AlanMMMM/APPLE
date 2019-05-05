@@ -1,46 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0ae0e6af-1e1f-4566-9aa0-6567bdfb068b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/APPLE2/gsAdmittedList.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APPLE2/gsCurrentList.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APPLE2/gsGraduateList.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APPLE2/gsListTool.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APPLE2/toolsGS.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE-APPS/LogIn/payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE-APPS/LogIn/payment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE-APPS/LogIn/paymentProcess.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE-APPS/LogIn/paymentProcess.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE-APPS/NewFaculty/applicationFullList.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE-APPS/NewFaculty/applicationFullList.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE-APPS/NewFaculty/dataUpdating.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE-APPS/NewFaculty/dataUpdating.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/approveHold.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/approveHold.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/courseCatalog.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/courseCatalog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/deleteAll.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/deleteAll.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/dropCourse.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/dropCourse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/editProfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/editProfile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/enrolledIn.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/enrolledIn.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/enrolledStud.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/enrolledStud.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/entry.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/entry.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/gpa.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/gpa.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/gradeGs.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/gradeGs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/gs.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/gs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/gsCourse.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/gsCourse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/gsEnroll.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/gsEnroll.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/holdChange.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/holdChange.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/newCourse.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/newCourse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/newGrad.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/newGrad.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/newMember.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/newMember.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/newStudent.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/newStudent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/registration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/teachCourse.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/teachCourse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/transcript.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/transcript.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE2/viewGs.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE2/viewGs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/schema.sql" afterDir="false" />
-    </list>
+    <list default="true" id="0ae0e6af-1e1f-4566-9aa0-6567bdfb068b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,15 +10,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/APPLE2/newStudent.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/APPLE2/registration.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -109,11 +61,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/APPLE2/viewGs.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
               <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/APPLE2/gsGraduateList.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="873">
+              <caret line="117" column="7" lean-forward="true" selection-end-line="117" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -273,12 +234,12 @@
       <updated>1556118717752</updated>
       <workItem from="1556118721080" duration="2211000" />
       <workItem from="1556957072029" duration="1747000" />
-      <workItem from="1556958854756" duration="20953000" />
+      <workItem from="1556958854756" duration="21194000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24911000" />
+    <option name="totallyTimeSpent" value="25152000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -383,13 +344,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1320">
           <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/APPLE2/gsGraduateList.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
@@ -635,6 +589,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/APPLE2/gsGraduateList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="873">
+          <caret line="117" column="7" lean-forward="true" selection-end-line="117" selection-end-column="7" />
         </state>
       </provider>
     </entry>

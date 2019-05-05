@@ -25,7 +25,7 @@
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
-        $squery = "SELECT DISTINCT app_term FROM applicantion WHERE degree_seeking='master'";
+        $squery = "SELECT DISTINCT app_term FROM applicantion A WHERE A.degree_seeking='master'";
         $sresult = $conn->query($squery) or die("mysql error".$mysqli->error);
 
         while($srow = mysqli_fetch_assoc($sresult)){
