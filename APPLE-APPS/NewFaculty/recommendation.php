@@ -18,6 +18,7 @@ if ($conn->connect_error) {
 }
 if(isset($_POST['goSelect'])) {
     $rid = $_POST['selection'];
+    $_SESSION['rid']=$rid;
     $rQuery = "SELECT * FROM recommendation WHERE rid=$rid";
     $rResult = $conn->query($rQuery) or die("rresult wrong" . $mysqli->error);
     while ($rRow = $rResult->fetch_assoc()) {
@@ -28,6 +29,7 @@ if(isset($_POST['goSelect'])) {
         echo $rRow["rec_letter"] . "<br>" . "<br>";
     }
 }
+$conn->close();
 ?>
 <form style="text-align: center;"  method="post">
     Recommendation Letter Rating: (Worst=1, Best=5) <select name="recRating" required="required">
@@ -53,7 +55,7 @@ if(isset($_POST['goSelect'])) {
 <?php
 
 if(isset($_POST['rate'])) {
-    echo "rid".$rid;
+    $rid=$SESSION['rid'];
     $recGenq=$_POST['recGen'];
     $recCreq=$_POST['recCre'];
     $recRatingq=$_POST['recRating'];
