@@ -1,5 +1,6 @@
 
 <?php
+session_start();
 $servername= "localhost";
         $username = "amstg";
         $password = "seas";
@@ -15,8 +16,10 @@ if ($conn->connect_error) {
     $oQuery = "SELECT * FROM applicant A, application B, recommendation C WHERE A.uid=$selectq AND A.uid=B.uid AND A.uid=C.uid AND A.app_status='completed'";
      
     $oResult= $conn->query($oQuery) or die($mysqli->error);
+
     
     while($oRow = $oResult->fetch_assoc()){
+
           echo "Name: ". $oRow["first_name"]." ".$oRow["last_name"]."<br>";
             echo "Student UID: ". $oRow["uid"]."<br>";
             echo "Semester of Application: ". $oRow["app_term"]."<br>";
@@ -36,17 +39,16 @@ if ($conn->connect_error) {
             echo "Application Material"."<br>";
             echo "Transcript Received: ". $oRow["transcript_received"]."<br>";
             echo "Recommendation Letter Received: ". $oRow["rec_received"]."<br>";
-            echo "Recommender: ".$oRow["rec_fname"]." ".$oRow["rec_lname"]."<br>";
-            echo "Recommender Tittle: ".$oRow["rec_title"]."<br>";
-            echo "Recommendation Letter Content: "."<br>";
-            echo $oRow["rec_letter"];
+
     }
+
 }else if(isset($_POST['goSearch'])){
     if(isset($_POST['search'])){
         $searchq = $_POST['search'];
         
         $sQuery = "SELECT * FROM applicant A, application B, recommendation C WHERE A.uid=$searchq AND A.uid=B.uid AND A.uid=C.uid AND A.app_status='completed'";
         $sResult = $conn->query($sQuery) or die("mysql error".$mysqli->error);
+
         if($sResult->num_rows==0)
         {
             echo "No Applicant Found or Applicant Doesn't Complete Application";
@@ -70,17 +72,15 @@ if ($conn->connect_error) {
             echo "Application Material"."<br>";
             echo "Transcript Received: ". $sRow["transcript_received"]."<br>";
             echo "Recommendation Letter Received: ". $sRow["rec_received"]."<br>";
-            echo "Recommender: ".$sRow["rec_fname"]." ".$sRow["rec_lname"]."<br>";
-            echo "Recommender Tittle: ".$sRow["rec_title"]."<br>";
-            echo "Recommendation Letter Content: "."<br>";
-            echo $sRow["rec_letter"];
-        }}}
+
+        }    }}
  }else if(isset($_POST['goSearchLN'])){
      if(isset($_POST['searchLN'])){
          $searchq = $_POST['searchLN'];
 
          $sQuery = "SELECT * FROM applicant A, application B, recommendation C WHERE A.last_name='$searchq' AND A.uid=B.uid AND A.uid=C.uid";
          $sResult = $conn->query($sQuery) or die("mysql error".$mysqli->error);
+
          if($sResult->num_rows==0)
          {
              echo "No Applicant Found";
@@ -106,10 +106,7 @@ if ($conn->connect_error) {
                  echo "Application Material"."<br>";
                  echo "Transcript Received: ". $sRow["transcript_received"]."<br>";
                  echo "Recommendation Letter Received: ". $sRow["rec_received"]."<br>";
-                 echo "Recommender: ".$sRow["rec_fname"]." ".$sRow["rec_lname"]."<br>";
-                 echo "Recommender Tittle: ".$sRow["rec_title"]."<br>";
-                 echo "Recommendation Letter Content: "."<br>";
-                 echo $sRow["rec_letter"];
+
              }}}
  }
 ?>
@@ -123,27 +120,29 @@ if ($conn->connect_error) {
 </head>
 <body>
 <h2 style="text-align:center;"> Now please make a decision recommendation</h2>
+<form style="text-align:center;" action="recommendation.php" method="post">
+    View Recommendation Letter <select name="selection" required="required">
+        <option disabled selected value> -- select a recommendation letter to view -- </option>
+        <?php
+
+        $query = "SELECT * FROM applicant A,  recommendation C WHERE A.uid=$searchq  AND A.uid=C.uid AND A.app_status='completed'";
+        $result = $conn->query($query) or die("mysql error".$mysqli->error);
+
+        while($row = mysqli_fetch_assoc($result)){
+            $rowRid=$row['rid'];
+            echo "<option value=\"$rowRid\">"."Recommendation Letter From".$row['rec_fname']." ".$row['rec_lname'] . "</option>";
+        }
+        $conn->close();
+        ?>
+    </select>
+    <br><br>
+    <input type="submit" name="goSelect" value="select" />
+</form>
+
 <form style="text-align: center;" action="makeRec.php" method="post">
     Student UID: (please type in numbers) <input type="number" required="required" name="decisionRecUID"><br>
     
-    Recommendation Letter Rating: (Worst=1, Best=5) <select name="recRating" required="required">
-                        <option disabled selected value> -- select a score -- </option>
-                        <option value=1>1</option>
-                        <option value=2>2</option>
-                        <option value=1>3</option>
-                        <option value=2>4</option>
-                        <option value=1>5</option>
-                       </select><br>
-    Is the Recommendation Letter Generic? <select name="recGen" required="required">
-                        <option disabled selected value> -- select YES or NO -- </option>
-                        <option value="Y">Yes</option>
-                        <option value="N">No</option>                 
-                        </select><br>
-    Is the Recommendation Letter Credible? <select name="recCre" required="required">
-                        <option disabled selected value> -- select YES or NO -- </option>
-                        <option value="Y">Yes</option>
-                        <option value="N">No</option>                 
-                        </select><br>
+
     Decision Recommendation: <select name="decisionRec" required="required">
                      
       <option disabled selected value> -- Make A Recommendation -- </option>
@@ -165,6 +164,7 @@ if ($conn->connect_error) {
     Recommend Advisor: (Max:40 Charactors) <input type="text" name="decisionRecAdv" maxlength=40><br>
     <input type="submit" value="Submit" >
 </form>
+
 <br><br><br><br>
 
 

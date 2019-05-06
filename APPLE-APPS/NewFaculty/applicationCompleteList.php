@@ -1,5 +1,8 @@
 
 <!DOCTYPE html>
+<?php
+session_start();
+?>
 <html>
 <head>
     <title>Applicant Info</title>
@@ -24,7 +27,8 @@
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
-        $query = "SELECT uid, first_name, last_name FROM applicant WHERE app_status='completed' ORDER BY uid";
+        $fid=$_SESSION['userID'];
+        $query = "SELECT uid, first_name, last_name FROM applicant WHERE app_status='completed' AND rev_by1!=$fid AND rev_by2!=$fid AND rev_by3!=$fid ORDER BY uid";
         $result = $conn->query($query) or die("mysql error".$mysqli->error);
         
         while($row = mysqli_fetch_assoc($result)){
