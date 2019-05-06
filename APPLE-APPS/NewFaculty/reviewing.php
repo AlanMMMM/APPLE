@@ -121,7 +121,7 @@ if(isset($_POST['goBackFromRec'])){
      if(isset($_POST['searchLN'])){
          $searchq = $_POST['searchLN'];
 
-         $sQuery = "SELECT * FROM applicant A, application B, recommendation C WHERE A.last_name='$searchq' AND A.uid=B.uid AND A.uid=C.uid";
+         $sQuery = "SELECT * FROM applicant A, application B, recommendation C WHERE A.last_name='$searchq' AND A.uid=B.uid AND A.uid=C.uid AND A.app_status='completed' AND rev_by1!=$fid AND rev_by2!=$fid AND rev_by3!=$fid";
          $sResult = $conn->query($sQuery) or die("mysql error".$mysqli->error);
 
          if($sResult->num_rows==0)

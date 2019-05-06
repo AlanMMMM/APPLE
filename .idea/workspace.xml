@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ae0e6af-1e1f-4566-9aa0-6567bdfb068b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/APPLE-APPS/NewFaculty/applicationCompleteList.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE-APPS/NewFaculty/applicationCompleteList.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APPLE-APPS/NewFaculty/reviewing.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE-APPS/NewFaculty/reviewing.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/APPLE-APPS/NewFaculty/reviewing.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11">
-              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+            <state relative-caret-position="685">
+              <caret line="123" column="222" selection-start-line="123" selection-start-column="222" selection-end-line="123" selection-end-column="222" />
             </state>
           </provider>
         </entry>
@@ -275,12 +274,12 @@
       <updated>1556118717752</updated>
       <workItem from="1556118721080" duration="2211000" />
       <workItem from="1556957072029" duration="1747000" />
-      <workItem from="1556958854756" duration="54453000" />
+      <workItem from="1556958854756" duration="54552000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58411000" />
+    <option name="totallyTimeSpent" value="58510000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -644,8 +643,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/APPLE-APPS/NewFaculty/reviewing.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        <state relative-caret-position="685">
+          <caret line="123" column="222" selection-start-line="123" selection-start-column="222" selection-end-line="123" selection-end-column="222" />
         </state>
       </provider>
     </entry>
