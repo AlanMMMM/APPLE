@@ -12,6 +12,8 @@ if ($conn->connect_error) {
    
  if(isset($_POST['goSelect'])){
     $selectq=$_POST['selection'];
+
+     $recuid=$selectq;
      
     $oQuery = "SELECT * FROM applicant A, application B, recommendation C WHERE A.uid=$selectq AND A.uid=B.uid AND A.uid=C.uid AND A.app_status='completed'";
      
@@ -54,6 +56,7 @@ if ($conn->connect_error) {
             echo "No Applicant Found or Applicant Doesn't Complete Application";
         }else{
         while($sRow = $sResult->fetch_assoc()) {
+            $recuid=$sRow["uid"];
              echo "Name: ". $sRow["first_name"]." ".$sRow["last_name"]."<br>";
             echo "Student UID: ". $sRow["uid"]."<br>";
             echo "Semester of Application: ". $sRow["app_term"]."<br>";
@@ -86,7 +89,7 @@ if ($conn->connect_error) {
              echo "No Applicant Found";
          }else{
              while($sRow = $sResult->fetch_assoc()) {
-
+                 $recuid=$sRow["uid"];
                  echo "Name: ". $sRow["first_name"]." ".$sRow["last_name"]."<br>";
                  echo "Student UID: ". $sRow["uid"]."<br>";
                  echo "Semester of Application: ". $sRow["app_term"]."<br>";
@@ -125,7 +128,8 @@ if ($conn->connect_error) {
         <option disabled selected value> -- select a recommendation letter to view -- </option>
         <?php
 
-        $query = "SELECT * FROM applicant A,  recommendation C WHERE A.uid=$searchq  AND A.uid=C.uid AND A.app_status='completed'";
+
+        $query = "SELECT * FROM applicant A,  recommendation C WHERE A.uid=$recuid  AND A.uid=C.uid AND A.app_status='completed'";
         $result = $conn->query($query) or die("mysql error".$mysqli->error);
 
         while($row = mysqli_fetch_assoc($result)){
