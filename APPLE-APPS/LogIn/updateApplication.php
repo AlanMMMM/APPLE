@@ -236,7 +236,7 @@ if(isset($_POST["changeTo"]))
 }
 ?>
 <form style="text-align: center;"  method="post" action="mainpage.php">
-    <input type="submit" name="goB" value="Go Back"
+    <input type="submit" name="goB" value="Go Back">
 </form>
 </body>
 </html>
