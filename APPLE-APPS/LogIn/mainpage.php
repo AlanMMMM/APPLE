@@ -7,27 +7,19 @@ session_start();
  </head>
 <input type=button onClick="location.href='aplication.php'" value='Apply'>
   <br />  
-    <br />  
-    <br />  
-    <br />  
-    <br />  
-    <br />  
-    <br />  
+
  
 <input type=button onClick="location.href='status.php'" value='Status'>
  <br />
- 
- 
-  <br />  
-    <br />  
-    <br />  
-    <br />  
-    <br />  
-    <br />  
-    <br />  
+
+ <input type=button onClick="location.href='updateApplication.php'" value='Log off'>
+ <br />
 
  <input type=button onClick="location.href='login.php'" value='Log off'>
- <br /><br />
+ <br />
+
+
+
   <?php
 echo "Your ID number is: " . $_SESSION["uid"]; 
 ?>

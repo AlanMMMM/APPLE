@@ -20,7 +20,7 @@ echo "<br />";
     <label for="email">Email:</label>
     <input type="email" required = "required" name="email" ><br />
     <label for="ssn">SSN:</label>
-    <input type="number" required = "required" name="ssn" maxlength = "15" ><br />
+    <input type="number" required = "required" name="ssn" max = "999999999" ><br />
     Seeking degree: <br />
     <input type="radio" required = "required" name="degree" value="MS"> MS<br>
     <input type="radio" name="degree" value="PHD"> PHD<br>
@@ -28,7 +28,7 @@ echo "<br />";
     <input type="radio" required = "required" name="app_term" value="Fall"> Fall<br>
     <input type="radio" name="app_term" value="Spring"> Spring<br>
       <label for= "app_year">apply year</label>
-      <input type="number" required=required name="app_year" maxlength="4">
+      <input type="number" required=required name="app_year" max="9999">
     <label for="area_of_interest">Area of interest:</label>
     <input type="text" required = "required" name="area_of_interest"  maxlength = "25"><br />
     <p> Address: </p>
@@ -39,7 +39,7 @@ echo "<br />";
     <label for="street">Street:</label>
     <input type="text" required = "required" name="street" maxlength = "20" ><br />
     <label for="zip">Zip:</label>
-    <input type="text" required = "required" name="zip" maxlength="5"><br />
+    <input type="number" required = "required" name="zip" max="99999"><br />
     <p> Academics and work experience: </p>
     <label for="bachelor_school">bachelor's degree school:</label>
     <input type="text" required = "required" name="bachelor_school" maxlength = "25" /><br />
@@ -48,7 +48,7 @@ echo "<br />";
     <label for="bachelor_major">bachelor's major:</label>
     <input type="text" required = "required" name="bachelor_major" maxlength = "25" /><br />
     <label for="bachelor_year">bachelor's degree year:</label>
-    <input type="number" required = "required" name="bachelor_year" maxlength="4"  ><br />
+    <input type="number" required = "required" name="bachelor_year" max="9999"  ><br />
     <label for="bachelor_gpa">bachelor's degree GPA:</label>
     <input type="number" step="0.01" required = "required" name="bachelor_gpa" /><br />
     <p> Masters degree (if applicable): </p>
@@ -59,7 +59,7 @@ echo "<br />";
     <label for="masters_major">master's major:</label>
     <input type="text" name="masters_major" maxlength = "25" /><br />
     <label for="masters_year">master's degree year:</label>
-    <input type="number" name="masters_year" maxlength="4"><br />
+    <input type="number" name="masters_year" max="9999"><br />
     <label for="masters_gpa">master's degree GPA:</label>
     <input type="number" step="0.01" name="masters_gpa" /><br />
     <p> Work Experience (if applicable): </p>
@@ -67,19 +67,19 @@ echo "<br />";
     <input type="text" name="work_experience" /><br />
     <p> Test Scores: </p>
     <label for="GRE_verbal">GRE verbal:</label>
-    <input type="number"  required = "required" name="GRE_verbal" maxlength="3"><br />
+    <input type="number"  required = "required" name="GRE_verbal" max="999"><br />
     <label for="GRE_quantitative">GRE quantitative:</label>
-    <input type="number" name="GRE_quantitative" maxlength="3"><br />
+    <input type="number" name="GRE_quantitative" max="999"><br />
     <label for="GRE_year">GRE year:</label>
-    <input type="number" name="GRE_year" maxlength="4"><br />
+    <input type="number" name="GRE_year" max="9999"><br />
     <label for="GRE_subject">GRE subject:</label>
     <input type="text" name="GRE_subject" maxlength = "10" /><br />
     <label for="GRE_score">GRE score(for subject):</label>
-    <input type="number" name="GRE_score" /><br />
+    <input type="number" name="GRE_score" max="9999"/><br />
     <label for="TOEFL">TOEFL score:</label>
-    <input type="number" name="TOEFL" /><br />
+    <input type="number" name="TOEFL" max="120"/><br />
     <label for="TOEFL_year">TOEFL year:</label>
-    <input type="number" name="TOEFL_year" /><br />
+    <input type="number" name="TOEFL_year" max="9999"/><br />
 
       <p> Recommendation Letter 1: </p>
 

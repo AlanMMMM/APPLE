@@ -39,7 +39,10 @@
                 $num = mysqli_num_rows($result); 
                 if($num)    //already exist 
                 {  
-                    echo "user already exist";  
+                    echo "user already exist";
+                    echo "<form style=\"text-align: center;\" action=\"login.php\" method=\"post\">
+    Now you can go back: <input type=\"submit\" value=\"GO BACK\" />
+</form>";
                 }  
                 else    //now existing user
                 {  
@@ -49,7 +52,9 @@
                     if($insertResult)  
                     {  
                         echo "register successfully, please go log in";  
-                        
+                        echo "<form style=\"text-align: center;\" action=\"login.php\" method=\"post\">
+    Now you can go back: <input type=\"submit\" value=\"LOG IN\" />
+</form>";
                         
                         
                         
