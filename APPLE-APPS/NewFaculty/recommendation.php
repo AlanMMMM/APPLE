@@ -18,7 +18,7 @@ if ($conn->connect_error) {
 }
 $rid=$_POST['selection'];
 $rQuery = "SELECT * FROM recommendation WHERE rid=$rid";
-$rResult = $conn->query($rQuery) or die("mysql error".$mysqli->error);
+$rResult = $conn->query($rQuery) or die("rresult wrong".$mysqli->error);
 while($rRow=$rResult->fetch_assoc()){
     echo "Recommendation Letter ID: ".$rRow["rid"]."<br>";
     echo "Recommender: ".$rRow["rec_fname"]." ".$rRow["rec_lname"]."<br>";
