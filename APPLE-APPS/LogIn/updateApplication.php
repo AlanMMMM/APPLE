@@ -213,6 +213,7 @@ session_start();
 if(isset($_POST["changeTo"]))
 {
     $termm=$_SESSION['term'];
+    $uid=$_SESSION['uid'];
     echo $termm;
     if(isset($_POST["$termm"])) {
 
