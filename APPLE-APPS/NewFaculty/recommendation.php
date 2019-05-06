@@ -16,15 +16,17 @@ $conn = new mysqli($servername,$username,$password,$dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$rid=$_POST['selection'];
-$rQuery = "SELECT * FROM recommendation WHERE rid=$rid";
-$rResult = $conn->query($rQuery) or die("rresult wrong".$mysqli->error);
-while($rRow=$rResult->fetch_assoc()){
-    echo "Recommendation Letter ID: ".$rRow["rid"]."<br>";
-    echo "Recommender: ".$rRow["rec_fname"]." ".$rRow["rec_lname"]."<br>";
-    echo "Recommender Tittle: ".$rRow["rec_title"]."<br>";
-    echo "Recommendation Letter Content: "."<br>";
-    echo $rRow["rec_letter"]."<br>"."<br>";
+if(isset($_POST['goSelect'])) {
+    $rid = $_POST['selection'];
+    $rQuery = "SELECT * FROM recommendation WHERE rid=$rid";
+    $rResult = $conn->query($rQuery) or die("rresult wrong" . $mysqli->error);
+    while ($rRow = $rResult->fetch_assoc()) {
+        echo "Recommendation Letter ID: " . $rRow["rid"] . "<br>";
+        echo "Recommender: " . $rRow["rec_fname"] . " " . $rRow["rec_lname"] . "<br>";
+        echo "Recommender Tittle: " . $rRow["rec_title"] . "<br>";
+        echo "Recommendation Letter Content: " . "<br>";
+        echo $rRow["rec_letter"] . "<br>" . "<br>";
+    }
 }
 ?>
 <form style="text-align: center;"  method="post">
