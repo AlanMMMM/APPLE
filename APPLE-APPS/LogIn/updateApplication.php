@@ -212,8 +212,9 @@ session_start();
 <?php
 if(isset($_POST["changeTo"]))
 {
-
-    if(isset($_POST[$term])) {
+    $termm="$term";
+    echo $termm;
+    if(isset($_POST[$termm])) {
         echo "gilfjl";
         $value=$_POST["$term"];
         $uid=$_SESSION['uid'];
