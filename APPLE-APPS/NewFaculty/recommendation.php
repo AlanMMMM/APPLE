@@ -32,7 +32,7 @@ if(isset($_POST['goSelect'])) {
         echo $rRow["rec_letter"] . "<br>" . "<br>";
     }
 }
-$conn->close();
+
 ?>
 <form style="text-align: center;"  method="post">
     Recommendation Letter Rating: (Worst=1, Best=5) <select name="recRating" required="required">
