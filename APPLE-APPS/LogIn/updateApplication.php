@@ -204,7 +204,7 @@ session_start();
         echo "<input type=\"radio\" required = \"required\" name=\"degree_seeking\" value=\"MS\"> MS<br>
     <input type=\"radio\" name=\"degree_seeking\" value=\"PHD\"> PHD<br>";
     }
-    echo "<input type=\"submit\" name=\"changeTo\" value=\"SUBMIT\">"
+    echo "<input type=\"submit\" name=\"changeTo\" value=\"SUBMIT\">";
     }
     ?>
 
