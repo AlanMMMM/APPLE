@@ -11,9 +11,9 @@ if ($conn->connect_error) {
 }
 if(isset($_POST['goBackFromRec'])){
 
-        $recuid=$_SESSION['completeUid'];
-        $searchq=$_SESSION['completeUid'];
-    $oQuery = "SELECT * FROM applicant A, application B, recommendation C WHERE A.uid=$selectq AND A.uid=B.uid AND A.uid=C.uid AND A.app_status='completed'";
+        $recuid=$_SESSION["completeUid"];
+        $selectq=$_SESSION["completeUid"];
+    $oQuery = "SELECT * FROM applicant A, application B WHERE A.uid=$selectq AND A.uid=B.uid  AND A.app_status='completed'";
 
     $oResult= $conn->query($oQuery) or die("oResult Wrong $mysqli->error".$mysqli->error);
 

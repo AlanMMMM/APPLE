@@ -60,11 +60,11 @@ if(isset($_POST['goSelect'])) {
 if(isset($_POST['rate'])) {
 
     $rid2=$_SESSION["rid"];
-    echo "rid".$rid2;
+
     $recGenq=$_POST['recGen'];
     $recCreq=$_POST['recCre'];
     $recRatingq=$_POST['recRating'];
-echo $recCreq.$recGenq.$recRatingq;
+
     $aQuery = "UPDATE recommendation  SET  rec_rating='$recRatingq', rec_generic='$recGenq', rec_credible='$recCreq' WHERE rid=$rid2";
     $aResult = $conn->query($aQuery) or die("aResult Wrong $mysqli->error" . $mysqli->error);
     if($aResult==TRUE) {
