@@ -53,13 +53,13 @@ $conn->close();
     <input type="submit" name="rate" value="Submit">
 </form>
 <?php
-
+session_start();
 if(isset($_POST['rate'])) {
     $rid=$_SESSION['rid'];
     $recGenq=$_POST['recGen'];
     $recCreq=$_POST['recCre'];
     $recRatingq=$_POST['recRating'];
-   
+
     $aQuery = "UPDATE recommendation  SET  rec_rating=$recRatingq, rec_generic='$recGenq', rec_credible='$recCreq' WHERE rid=$rid";
     $aResult = $conn->query($aQuery) or die("aResult Wrong $mysqli->error" . $mysqli->error);
     if($aResult==TRUE) {
