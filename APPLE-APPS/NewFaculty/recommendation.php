@@ -58,6 +58,7 @@ $conn->close();
 <?php
 
 if(isset($_POST['rate'])) {
+    echo "session".$_SESSION["rid"];
     $rid=$_SESSION['rid'];
     $recGenq=$_POST['recGen'];
     $recCreq=$_POST['recCre'];
