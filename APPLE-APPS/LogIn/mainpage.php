@@ -7,7 +7,7 @@ session_start();
  </head>
  <h2>My Application</h2>
 
- <form   method="post" action="application.php">
+ <form   method="post" action="aplication.php">
      <input type="submit" name="apply" value="New Application">
  </form>
  <br>
