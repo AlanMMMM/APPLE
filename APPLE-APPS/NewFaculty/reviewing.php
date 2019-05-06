@@ -9,12 +9,51 @@ $conn = new mysqli($servername,$username,$password,$dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-   
- if(isset($_POST['goSelect'])){
-    $selectq=$_POST['selection'];
+if(isset($_POST['goBackFromRec'])){
 
-     $recuid=$selectq;
-     
+        $recuid=$_SESSION['completeUid'];
+        $searchq=$_SESSION['completeUid'];
+    $oQuery = "SELECT * FROM applicant A, application B, recommendation C WHERE A.uid=$selectq AND A.uid=B.uid AND A.uid=C.uid AND A.app_status='completed'";
+
+    $oResult= $conn->query($oQuery) or die($mysqli->error);
+
+
+    while($oRow = $oResult->fetch_assoc()){
+
+        echo "Name: ". $oRow["first_name"]." ".$oRow["last_name"]."<br>";
+        echo "Student UID: ". $oRow["uid"]."<br>";
+        echo "Semester of Application: ". $oRow["app_term"]."<br>";
+        echo "Applying for Degree: ".$oRow["degree_seeking"]."<br>";
+        echo "Area of Interest: ". $oRow["area_of_interest"]."<br><br>";
+
+        echo "Exams"."<br>";
+        echo "GRE &nbsp;&nbsp;&nbsp;"."Verbal: ". $oRow["GRE_verbal"]."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"."Quantitative: ".$oRow["GRE_quantitative"]."<br>";
+        echo "Year of Exam: ".$oRow["exam_year"]."<br>";
+        echo "GRE Advanced &nbsp;&nbsp;&nbsp;"."Score: ".$oRow["GRE_score"]."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"."Subject: ".$oRow["GRE_subject"]."<br>";
+        echo "TOEFL Score: ".$oRow["TOEFL_score"]."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Year of Exam: ".$oRow["TOEFL_year"]."<br><br>";
+
+        echo "Prior Degrees"."<br>";
+        echo "Bachelor Degree: ".$oRow["bachelor_degree"]."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GPA: ".$oRow["bachelor_gpa"]."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Major: ".$oRow["bachelor_major"]."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Year: ".$oRow["bachelor_year"]."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;University: ".$oRow["bachelor_school"]."<br>";
+        echo "Master Degree: ".$oRow["masters_degree"]."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GPA: ".$oRow["masters_gpa"]."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Major: ".$oRow["masters_major"]."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Year: ".$oRow["masters_year"]."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;University: ".$oRow["masters_school"]."<br><br>";
+
+        echo "Application Material"."<br>";
+        echo "Transcript Received: ". $oRow["transcript_received"]."<br>";
+        echo "Recommendation Letter Received: ". $oRow["rec_received"]."<br>";
+
+    }
+
+}
+ else if(isset($_POST['goSelect'])){
+
+
+
+
+         $selectq=$_POST['selection'];
+         $recuid = $selectq;
+         $_SESSION['completeUid'] = $recuid;
+
+
+
     $oQuery = "SELECT * FROM applicant A, application B, recommendation C WHERE A.uid=$selectq AND A.uid=B.uid AND A.uid=C.uid AND A.app_status='completed'";
      
     $oResult= $conn->query($oQuery) or die($mysqli->error);

@@ -55,14 +55,18 @@ $recRatingq=$_POST['recRating'];
 if(isset($_POST['rate'])) {
     $aQuery = "UPDATE recommendation B SET  B.rec_rating='$recRatingq', B.rec_generic='$recGenq', B.rec_credible='$recCreq' WHERE B.rid=$rid";
     $aResult = $conn->query($aQuery) or die("mysql error" . $mysqli->error);
+    if($aResult==TRUE) {
+        echo "Grade Recommendation Letter Successfully";
+    }else{
+        echo "failed to make decision recommendation, please try again";
+    }
+    $conn->close();
 }
-if($aResult==TRUE) {
-    echo "Grade Recommendation Letter Successfully";
-}else{
-    echo "failed to make decision recommendation, please try again";
-}
-$conn->close();
+
 ?>
+<form style="text-align: center;" action="reviewing.php" method="post">
+    <input type="submit" name="goBackFromRec" value="GO BACK">
+</form>
 </body>
 </html>
 
