@@ -7,9 +7,10 @@ session_start();
     <title>Update My Application</title>
     <link rel="stylesheet" href="../../APPLE2/style.css">
 </head>
-<body>
 <h2>Update My Application</h2>
-<form style="text-align: center;"  method="post">
+<body>
+
+<form   method="post">
     Select A Info Type: <select name="infoSelection" required="required">
         <option disabled selected value> -- select an option -- </option>
         <?php
@@ -115,7 +116,7 @@ session_start();
     <input type="submit" name="change" value="Select" />
 </form>
 <br><br>
-<form style="text-align: center;"  method="post">
+<form method="post">
     Change It To:
     <?php
     if(isset($_POST["change"])){
@@ -235,7 +236,7 @@ if(isset($_POST["changeTo"]))
 
 }
 ?>
-<form style="text-align: center;"  method="post" action="mainpage.php">
+<form  method="post" action="mainpage.php">
     <input type="submit" name="goB" value="Go Back">
 </form>
 </body>

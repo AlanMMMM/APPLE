@@ -59,7 +59,7 @@ session_start();
     <label for="masters_major">master's major:</label>
     <input type="text" name="masters_major" maxlength = "25" /><br /><br /><br />
     <label for="masters_year">master's degree year:</label>
-    <input type="number" name="masters_year" max="9999"><br />
+    <input type="number" name="masters_year" max="9999"><br /><br /><br />
     <label for="masters_gpa">master's degree GPA:</label>
     <input type="number" step="0.01" name="masters_gpa" /><br /><br /><br />
     <h4> Work Experience (if applicable): </h4>
@@ -81,10 +81,10 @@ session_start();
     <label for="TOEFL_year">TOEFL year:</label>
     <input type="number" name="TOEFL_year" max="9999"/><br /><br /><br />
 
-      <h4> Recommendation Letter 1: </h4>
+      <h4> Recommendation Letter 1 (required): </h4>
 
     <label for="rec_email1">Recommender's email:</label>
-    <input type="email" name="rec_email1" /><br /><br /><br />
+    <input type="email" name="rec_email1" required="required"/><br /><br /><br />
 
       <h4> Recommendation Letter 2: </h4>
 

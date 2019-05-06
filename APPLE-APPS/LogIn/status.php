@@ -8,9 +8,9 @@ session_start();
         <title>My Status</title>
         <link rel="stylesheet" href="../../APPLE2/style.css">
     </head>
-
+    <h2>Application status:</h2>
 <body>	
-	<h1>Application status:</h1>	
+
 <?php		
   
     $servername = "localhost";
@@ -111,6 +111,8 @@ session_start();
 ?>
 <br />
 
-  <input type=button onClick="location.href='mainpage.php'" value='Back to home page'>
+    <form   method="post" action="mainpage.php">
+        <input type="submit" name="goBack" value='Go Back'>
+    </form>
 </body>
 </html>

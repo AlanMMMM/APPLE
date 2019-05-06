@@ -91,7 +91,7 @@ session_start();
 // send email
           $mail3=mail("$rec_email3","Recommendation Letter Request","$msg3");
 
-          if(!$mail1||!$mail2||!$mail3){
+          if(!$mail1&&!$mail2&&!$mail3){
 
               echo "There was a problem sending recommendation invitaiton, please try again or contact an administrator for assistance.\n" . $mail1.$mail2.$mail3;
       }
