@@ -134,7 +134,7 @@ if ($conn->connect_error) {
 
         while($row = mysqli_fetch_assoc($result)){
             $rowRid=$row['rid'];
-            echo "<option value=\"$rowRid\">"."Recommendation Letter From".$row['rec_fname']." ".$row['rec_lname'] . "</option>";
+            echo "<option value=\"$rowRid\">"."Recommendation Letter From ".$row['rec_fname']." ".$row['rec_lname'] . "</option>";
         }
         $conn->close();
         ?>

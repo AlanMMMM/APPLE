@@ -46,14 +46,16 @@ while($rRow=$rResult->fetch_assoc()){
         <option value="Y">Yes</option>
         <option value="N">No</option>
     </select><br>
+    <input type="submit" name="rate" value="Submit">
 </form>
 <?php
 $recGenq=$_POST['recGen'];
 $recCreq=$_POST['recCre'];
 $recRatingq=$_POST['recRating'];
-$aQuery = "UPDATE recommendation B SET  B.rec_rating='$recRatingq', B.rec_generic='$recGenq', B.rec_credible='$recCreq' WHERE B.rid=$rid";
-$aResult = $conn->query($aQuery) or die("mysql error".$mysqli->error);
-
+if(isset($_POST['rate'])) {
+    $aQuery = "UPDATE recommendation B SET  B.rec_rating='$recRatingq', B.rec_generic='$recGenq', B.rec_credible='$recCreq' WHERE B.rid=$rid";
+    $aResult = $conn->query($aQuery) or die("mysql error" . $mysqli->error);
+}
 if($aResult==TRUE) {
     echo "Grade Recommendation Letter Successfully";
 }else{
