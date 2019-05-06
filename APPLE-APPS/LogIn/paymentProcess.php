@@ -11,7 +11,7 @@ if ($conn->connect_error) {
 
     $uid = $_SESSION["uid"];
     $pQuery = "UPDATE applicant A SET A.payment=1 WHERE A.uid='$uid'";
-    $sQuery = "";
+
     $check="SELECT * from applicant A WHERE A.uid='$uid'";
     $checkResult=$conn->query($check) or die("mysql error".$mysqli->error);
     $row = mysqli_fetch_array($checkResult);
@@ -29,11 +29,12 @@ if ($conn->connect_error) {
             $fname=$row['first_name'];
             $lname=$row['last_name'];
             $appyear=$row['app_year'];
-            $username=$rowUser['username'];
+            $usernameUser=$rowUser['username'];
             $email=$rowApp['email'];
-            $password=$rowUser['password'];
+            $passwordUser=$rowUser['password'];
             $city=$rowApp['city'];
-            $sQuery = "INSERT INTO student VALUES ('$fname', '$lname', '$username', '$email','Dawn Ginetti',1, '$password', $uid, 'cs', '$city',$appyear)";
+            $major=$rowApp['area_of_interest'];
+            $sQuery = "INSERT INTO student VALUES ('$fname', '$lname', '$usernameUser', '$email','Dawn Ginetti',1, '$passwordUser', $uid, '$major', '$city',$appyear)";
             $sResult=$conn->query($sQuery) or die("mysql error".$mysqli->error);
             echo "Payment Received!";
             echo " <input type=button onClick=\"location.href='../../APPLE2/login.php'\" value='Student Portal'>";
