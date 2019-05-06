@@ -215,9 +215,11 @@ if(isset($_POST["changeTo"]))
     $termm=$_SESSION['term'];
     echo $termm;
     if(isset($_POST["$termm"])) {
-        echo "gilfjl";
+
         $value=$_POST["$termm"];
         $uid=$_SESSION['uid'];
+        echo $value;
+        echo $uid;
         $cquery = "UPDATE application SET $termm='$value' WHERE uid=$uid";
         $cresult = $conn->query($cquery) or die("mysql error".$mysqli->error);
         if	($cresult)	{
