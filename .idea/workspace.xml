@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0ae0e6af-1e1f-4566-9aa0-6567bdfb068b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/APPLE-APPS/LogIn/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE-APPS/LogIn/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE-APPS/LogIn/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE-APPS/LogIn/register.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -169,8 +168,8 @@
         <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/sendTranscriptLink.php" />
         <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/recommendation.html" />
         <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/transcript.php" />
-        <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/login.php" />
         <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/register.php" />
+        <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/login.php" />
       </list>
     </option>
   </component>
@@ -283,12 +282,12 @@
       <updated>1556118717752</updated>
       <workItem from="1556118721080" duration="2211000" />
       <workItem from="1556957072029" duration="1747000" />
-      <workItem from="1556958854756" duration="64333000" />
+      <workItem from="1556958854756" duration="64477000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68291000" />
+    <option name="totallyTimeSpent" value="68435000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />

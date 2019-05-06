@@ -12,11 +12,11 @@
     
     
        
-    username:<input type="text" name="USERNAME" />
+    USERNAME:<input type="text" name="username" />
 
     <br />  
 
-    password:<input type="password" name="PASSWORD" />
+    PASSWORD:<input type="password" name="password" />
 
     <br />  
 
