@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0ae0e6af-1e1f-4566-9aa0-6567bdfb068b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/APPLE-APPS/LogIn/mainpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE-APPS/LogIn/mainpage.php" afterDir="false" />
-    </list>
+    <list default="true" id="0ae0e6af-1e1f-4566-9aa0-6567bdfb068b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,7 +10,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/mainpage.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -21,10 +19,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/aplication.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-98">
+            <state>
               <caret selection-end-line="102" selection-end-column="7" />
             </state>
           </provider>
@@ -155,7 +153,6 @@
         <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/submit.php" />
         <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/recommendation.php" />
         <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/registerCheck.php" />
-        <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/aplication.php" />
         <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/paymentProcess.php" />
         <option value="$PROJECT_DIR$/APPLE-APPS/NewFaculty/applicationReviewedList.php" />
         <option value="$PROJECT_DIR$/schema.sql" />
@@ -170,6 +167,7 @@
         <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/register.php" />
         <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/login.php" />
         <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/mainpage.php" />
+        <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/aplication.php" />
       </list>
     </option>
   </component>
@@ -282,12 +280,12 @@
       <updated>1556118717752</updated>
       <workItem from="1556118721080" duration="2211000" />
       <workItem from="1556957072029" duration="1747000" />
-      <workItem from="1556958854756" duration="64950000" />
+      <workItem from="1556958854756" duration="65175000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68908000" />
+    <option name="totallyTimeSpent" value="69133000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -590,13 +588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/aplication.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-98">
-          <caret selection-end-line="102" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/paymentProcess.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -657,6 +648,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/aplication.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="102" selection-end-column="7" />
         </state>
       </provider>
     </entry>

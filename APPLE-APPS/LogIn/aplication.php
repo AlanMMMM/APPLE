@@ -12,7 +12,7 @@ session_start();
   <h2>Apply By Filling Out This Form</h2>
 
   <form method="post" action="submit.php">
-    <p> Personal Information: </p>
+    <h4> Personal Information: </h4>
     <label for="firstname">First name:</label>
     <input type="text" required = "required" name="firstname" maxlength = "15"><br /><br /><br />
     <label for="lastname">Last name:</label>
@@ -23,15 +23,15 @@ session_start();
     <input type="number" required = "required" name="ssn" max = "999999999" ><br /><br /><br />
     Seeking degree: <br />
     <input type="radio" required = "required" name="degree" value="MS"> MS<br>
-    <input type="radio" name="degree" value="PHD"> PHD<br>
+    <input type="radio" name="degree" value="PHD"> PHD<br><br /><br />
     Admission date(term): <br />
     <input type="radio" required = "required" name="app_term" value="Fall"> Fall<br>
-    <input type="radio" name="app_term" value="Spring"> Spring<br>
+    <input type="radio" name="app_term" value="Spring"> Spring<br><br /><br />
       <label for= "app_year">apply year</label>
       <input type="number" required=required name="app_year" max="9999"><br /><br /><br />
     <label for="area_of_interest">Area of interest:</label>
     <input type="text" required = "required" name="area_of_interest"  maxlength = "25"><br /><br /><br />
-    <p> Address: </p>
+    <h4> Address: </h4>
     <label for="city">City:</label>
     <input type="text" required = "required" name="city" maxlength = "15" ><br /><br /><br />
     <label for="state">State:</label>
@@ -40,7 +40,7 @@ session_start();
     <input type="text" required = "required" name="street" maxlength = "20" ><br /><br /><br />
     <label for="zip">Zip:</label>
     <input type="number" required = "required" name="zip" max="99999"><br /><br /><br />
-    <p> Academics and work experience: </p>
+    <h4> Academics and work experience: </h4>
     <label for="bachelor_school">bachelor's degree school:</label>
     <input type="text" required = "required" name="bachelor_school" maxlength = "25" /><br /><br /><br />
     <label for="bachelor_degree">bachelor's degree type:</label>
@@ -51,7 +51,7 @@ session_start();
     <input type="number" required = "required" name="bachelor_year" max="9999"  ><br /><br /><br />
     <label for="bachelor_gpa">bachelor's degree GPA:</label>
     <input type="number" step="0.01" required = "required" name="bachelor_gpa" /><br /><br /><br />
-    <p> Masters degree (if applicable): </p>
+    <h4> Masters degree (if applicable): </h4>
     <label for="masters_school">master's degree school:</label>
     <input type="text" name="masters_school" maxlength = "25" /><br /><br /><br />
     <label for="masters_degree">master's degree type:</label>
@@ -62,10 +62,10 @@ session_start();
     <input type="number" name="masters_year" max="9999"><br />
     <label for="masters_gpa">master's degree GPA:</label>
     <input type="number" step="0.01" name="masters_gpa" /><br /><br /><br />
-    <p> Work Experience (if applicable): </p>
+    <h4> Work Experience (if applicable): </h4>
     <label for="work_experience">What work experience do you have?</label>
     <input type="text" name="work_experience" /><br /><br /><br />
-    <p> Test Scores: </p>
+    <h4> Test Scores: </h4>
     <label for="GRE_verbal">GRE verbal:</label>
     <input type="number"  required = "required" name="GRE_verbal" max="999"><br /><br /><br />
     <label for="GRE_quantitative">GRE quantitative:</label>
@@ -81,17 +81,17 @@ session_start();
     <label for="TOEFL_year">TOEFL year:</label>
     <input type="number" name="TOEFL_year" max="9999"/><br /><br /><br />
 
-      <p> Recommendation Letter 1: </p>
+      <h4> Recommendation Letter 1: </h4>
 
     <label for="rec_email1">Recommender's email:</label>
     <input type="email" name="rec_email1" /><br /><br /><br />
 
-      <p> Recommendation Letter 2: </p>
+      <h4> Recommendation Letter 2: </h4>
 
       <label for="rec_email2">Recommender's email:</label>
       <input type="email" name="rec_email2" /><br /><br /><br />
 
-      <p> Recommendation Letter 3: </p>
+      <h4> Recommendation Letter 3: </h4>
 
       <label for="rec_email3">Recommender's email:</label>
       <input type="email" name="rec_email3" /><br /><br /><br />
