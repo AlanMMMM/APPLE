@@ -212,6 +212,7 @@ session_start();
 <?php
 if(isset($_POST["changeTo"]))
 {
+    echo "gilfjl";
     if(isset($_POST["$term"])) {
         echo "gilfjl";
         $value=$_POST["$term"];
