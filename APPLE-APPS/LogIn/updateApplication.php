@@ -118,7 +118,7 @@ session_start();
 <form style="text-align: center;"  method="post">
     Change It To:
     <?php
-    if(isset($_POST["change"]))
+    if(isset($_POST["change"])){
         $term=$_POST["infoSelection"];
 
     if($term=='ssn') {
@@ -150,22 +150,22 @@ session_start();
         echo "<input type=\"number\"  required = \"required\" name=\"GRE_verbal\" max=\"999\" min=\"0\">";
     }
     if($term=='GRE_quantitative') {
-        echo "<input type=\"number\" name=\"GRE_quantitative\" max=\"999\" min=\"0\">";
+        echo "<input type=\"number\" name=\"GRE_quantitative\" max=\"999\" min=\"0\" required = \"required\">";
     }
     if($term=='exam_year') {
-        echo "<input type=\"number\" name=\"exam_year\" max=\"2020\" min=\"1000\">";
+        echo "<input type=\"number\" name=\"exam_year\" max=\"2020\" min=\"1000\" required = \"required\">";
     }
     if($term=='GRE_score') {
-        echo "<input type=\"number\" name=\"GRE_score\" max=\"9999\" min=\"0\"/>";
+        echo "<input type=\"number\" name=\"GRE_score\" max=\"9999\" min=\"0\" required = \"required\"/>";
     }
     if($term=='GRE_subject') {
-        echo "<input type=\"text\" name=\"GRE_subject\" maxlength = \"10\" />";
+        echo "<input type=\"text\" name=\"GRE_subject\" maxlength = \"10\" required = \"required\"/>";
     }
     if($term=='TOEFL_score') {
-        echo "<input type=\"number\" name=\"TOEFL_score\" max=\"120\" min=\"0\"/>";
+        echo "<input type=\"number\" name=\"TOEFL_score\" max=\"120\" min=\"0\" required = \"required\"/>";
     }
     if($term=='TOEFL_year') {
-        echo "<input type=\"number\" name=\"TOEFL_year\" max=\"9999\" min=\"1000\"/>";
+        echo "<input type=\"number\" name=\"TOEFL_year\" max=\"9999\" min=\"1000\" required = \"required\"/>";
     }
     if($term=='bachelor_school') {
         echo "<input type=\"text\" required = \"required\" name=\"bachelor_school\" maxlength = \"25\" />";
@@ -183,19 +183,19 @@ session_start();
         echo "<input type=\"number\" step=\"0.01\" required = \"required\" name=\"bachelor_gpa\" />";
     }
     if($term=='master_school') {
-        echo "<input type=\"text\" name=\"masters_school\" maxlength = \"25\" />";
+        echo "<input type=\"text\" name=\"masters_school\" maxlength = \"25\" required = \"required\"/>";
     }
     if($term=='master_degree') {
-        echo "<input type=\"text\" name=\"masters_degree\" maxlength = \"25\" />";
+        echo "<input type=\"text\" name=\"masters_degree\" maxlength = \"25\" required = \"required\"/>";
     }
     if($term=='master_major') {
-        echo "<input type=\"text\" name=\"masters_major\" maxlength = \"25\" />";
+        echo "<input type=\"text\" name=\"masters_major\" maxlength = \"25\" required = \"required\"/>";
     }
     if($term=='master_year') {
-        echo "<input type=\"number\" name=\"masters_year\" max=\"2020\" min=\"1000\">";
+        echo "<input type=\"number\" name=\"masters_year\" max=\"2020\" min=\"1000\" required = \"required\">";
     }
     if($term=='master_gpa') {
-        echo "<input type=\"number\" step=\"0.01\" name=\"masters_gpa\" />";
+        echo "<input type=\"number\" step=\"0.01\" name=\"masters_gpa\" required = \"required\"/>";
     }
     if($term=='area_of_interest') {
         echo "<input type=\"text\" required = \"required\" name=\"area_of_interest\"  maxlength = \"25\">";
@@ -204,13 +204,16 @@ session_start();
         echo "<input type=\"radio\" required = \"required\" name=\"degree_seeking\" value=\"MS\"> MS<br>
     <input type=\"radio\" name=\"degree_seeking\" value=\"PHD\"> PHD<br>";
     }
+    echo "<input type=\"submit\" name=\"changeTo\" value=\"SUBMIT\">"
+    }
     ?>
-    <input type="submit" name="changeTo" value="SUBMIT">
+
 </form>
 <?php
 if(isset($_POST["changeTo"]))
 {
     if(isset($_POST["$term"])) {
+        echo "gilfjl";
         $value=$_POST["$term"];
         $uid=$_SESSION['uid'];
         $cquery = "UPDATE application SET $term='$value' WHERE uid=$uid";
