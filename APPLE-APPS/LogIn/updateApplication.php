@@ -115,10 +115,12 @@ session_start();
     <input type="submit" name="change" value="Select" />
 </form>
 <br><br>
-<form>
+<form style="text-align: center;"  method="post">
+    Change It To:
     <?php
     if(isset($_POST["change"]))
         $term=$_POST["infoSelection"];
+
     if($term=='ssn') {
         echo "<input type=\"number\" required = \"required\" name=\"ssn\" max = \"999999999\" ><br />";
     }
@@ -135,7 +137,7 @@ session_start();
         echo "<input type=\"number\" required = \"required\" name=\"zip\" max=\"99999\" min=\"10000\">";
     }
     if($term=='email') {
-        echo "<option value=\"$rowTerm\">" . "Email Address" . "</option>";
+        echo "<input type=\"email\" required = \"required\" name=\"email\" >";
     }
     if($term=='app_term') {
         echo "<input type=\"radio\" required = \"required\" name=\"app_term\" value=\"Fall\"> Fall<br>
@@ -151,7 +153,7 @@ session_start();
         echo "<input type=\"number\" name=\"GRE_quantitative\" max=\"999\" min=\"0\">";
     }
     if($term=='exam_year') {
-        echo "<input type=\"number\" name=\"GRE_year\" max=\"2020\" min=\"1000\">";
+        echo "<input type=\"number\" name=\"exam_year\" max=\"2020\" min=\"1000\">";
     }
     if($term=='GRE_score') {
         echo "<input type=\"number\" name=\"GRE_score\" max=\"9999\" min=\"0\"/>";
@@ -160,7 +162,7 @@ session_start();
         echo "<input type=\"text\" name=\"GRE_subject\" maxlength = \"10\" />";
     }
     if($term=='TOEFL_score') {
-        echo "<input type=\"number\" name=\"TOEFL\" max=\"120\" min=\"0\"/>";
+        echo "<input type=\"number\" name=\"TOEFL_score\" max=\"120\" min=\"0\"/>";
     }
     if($term=='TOEFL_year') {
         echo "<input type=\"number\" name=\"TOEFL_year\" max=\"9999\" min=\"1000\"/>";
@@ -199,10 +201,32 @@ session_start();
         echo "<input type=\"text\" required = \"required\" name=\"area_of_interest\"  maxlength = \"25\">";
     }
     if($term=='degree_seeking') {
-        echo "<input type=\"radio\" required = \"required\" name=\"degree\" value=\"MS\"> MS<br>
-    <input type=\"radio\" name=\"degree\" value=\"PHD\"> PHD<br>";
+        echo "<input type=\"radio\" required = \"required\" name=\"degree_seeking\" value=\"MS\"> MS<br>
+    <input type=\"radio\" name=\"degree_seeking\" value=\"PHD\"> PHD<br>";
     }
     ?>
+    <input type="submit" name="changeTo" value="SUBMIT">
 </form>
+<?php
+if(isset($_POST["changeTo"]))
+{
+    if(isset($_POST["$term"])) {
+        $value=$_POST["$term"];
+        $uid=$_SESSION['uid'];
+        $cquery = "UPDATE application SET $term='$value' WHERE uid=$uid";
+        $cresult = $conn->query($cquery) or die("mysql error".$mysqli->error);
+        if	($cresult)	{
+            echo		"Updated Successfully	<br/>";
+        }
+        else	{
+            echo "Error:	";
+            echo "The Update could not be submitted";
+        }
+    }
+
+
+
+}
+?>
 </body>
 </html>
