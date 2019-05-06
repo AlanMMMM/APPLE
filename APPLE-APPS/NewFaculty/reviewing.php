@@ -13,7 +13,7 @@ if(isset($_POST['goBackFromRec'])){
 
         $recuid=$_SESSION["completeUid"];
         $selectq=$_SESSION["completeUid"];
-    $oQuery = "SELECT * FROM applicant A, application B WHERE A.uid=$selectq AND A.uid=B.uid  AND A.app_status='completed'";
+    $oQuery = "SELECT * FROM applicant A, application B WHERE A.uid=$selectq AND A.uid=B.uid  AND A.app_status='completed' AND rev_by1!=$fid AND rev_by2!=$fid AND rev_by3!=$fid";
 
     $oResult= $conn->query($oQuery) or die("oResult Wrong $mysqli->error".$mysqli->error);
 
@@ -54,7 +54,7 @@ if(isset($_POST['goBackFromRec'])){
 
 
 
-    $oQuery = "SELECT * FROM applicant A, application B, recommendation C WHERE A.uid=$selectq AND A.uid=B.uid AND A.uid=C.uid AND A.app_status='completed'";
+    $oQuery = "SELECT * FROM applicant A, application B, recommendation C WHERE A.uid=$selectq AND A.uid=B.uid AND A.uid=C.uid AND A.app_status='completed' AND rev_by1!=$fid AND rev_by2!=$fid AND rev_by3!=$fid";
      
     $oResult= $conn->query($oQuery) or die($mysqli->error);
 
@@ -87,7 +87,7 @@ if(isset($_POST['goBackFromRec'])){
     if(isset($_POST['search'])){
         $searchq = $_POST['search'];
         
-        $sQuery = "SELECT * FROM applicant A, application B, recommendation C WHERE A.uid=$searchq AND A.uid=B.uid AND A.uid=C.uid AND A.app_status='completed'";
+        $sQuery = "SELECT * FROM applicant A, application B, recommendation C WHERE A.uid=$searchq AND A.uid=B.uid AND A.uid=C.uid AND A.app_status='completed' AND rev_by1!=$fid AND rev_by2!=$fid AND rev_by3!=$fid";
         $sResult = $conn->query($sQuery) or die("mysql error".$mysqli->error);
 
         if($sResult->num_rows==0)
