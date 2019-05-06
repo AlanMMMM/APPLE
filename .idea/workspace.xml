@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0ae0e6af-1e1f-4566-9aa0-6567bdfb068b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/APPLE-APPS/LogIn/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE-APPS/LogIn/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APPLE-APPS/LogIn/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE-APPS/LogIn/register.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,11 +58,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/login.php">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret selection-end-line="31" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/register.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -80,15 +90,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="798">
               <caret line="237" lean-forward="true" selection-start-line="237" selection-end-line="239" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/recommendation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -119,7 +120,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/APPLE2/deleteAll.php" />
         <option value="$PROJECT_DIR$/APPLE2/dropCourse.php" />
         <option value="$PROJECT_DIR$/APPLE2/editProfile.php" />
         <option value="$PROJECT_DIR$/APPLE2/enrolledIn.php" />
@@ -170,6 +170,7 @@
         <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/recommendation.html" />
         <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/transcript.php" />
         <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/login.php" />
+        <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/register.php" />
       </list>
     </option>
   </component>
@@ -282,12 +283,12 @@
       <updated>1556118717752</updated>
       <workItem from="1556118721080" duration="2211000" />
       <workItem from="1556957072029" duration="1747000" />
-      <workItem from="1556958854756" duration="64106000" />
+      <workItem from="1556958854756" duration="64333000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68064000" />
+    <option name="totallyTimeSpent" value="68291000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -467,9 +468,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-432" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/register.php">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/APPLE2/grade.php">
       <provider selected="true" editor-type-id="text-editor" />
@@ -653,6 +651,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="31" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
         </state>
       </provider>
     </entry>

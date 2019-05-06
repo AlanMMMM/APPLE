@@ -2,15 +2,15 @@
     <title>Registration</title>
     <link rel="stylesheet" href="../../APPLE2/style.css">
 </head>
+<h2>New Applicant Registration</h2>
+<form action="registerCheck.php" method="post">
 
-<form action="registerCheck.php" method="post">  
-    
-    
-    username:<input type="text" name="username"/>  
-    <br/>  
-    password:<input type="password" name="password"/>  
-    <br/>  
-    confirm password:<input type="password" name="confirm"/>  
-    <br/>  
-    <input type="Submit" name="Submit" value="register"/>  
+
+    Create  Username:<input type="text" name="username"/>
+    <br/>
+    Create  Password:<input type="password" name="password"/>
+    <br/>
+    Confirm Password:<input type="password" name="confirm"/>
+    <br/>
+    <input type="Submit" name="Submit" value="REGISTER"/>
 </form>

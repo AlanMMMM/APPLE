@@ -27,6 +27,6 @@
 
 
 </form>
-<form style="text-align: center;"  method="post" action="register.php">
+<form   method="post" action="register.php">
     <input type="submit" name="go" value="REGISTER">
 </form>
