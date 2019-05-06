@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ae0e6af-1e1f-4566-9aa0-6567bdfb068b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/APPLE-APPS/LogIn/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE-APPS/LogIn/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APPLE-APPS/LogIn/mainpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE-APPS/LogIn/mainpage.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,11 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/mainpage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="18" selection-end-column="7" />
+            <state relative-caret-position="285">
+              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -60,17 +60,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="31" selection-end-column="7" />
+            <state relative-caret-position="435">
+              <caret line="29" selection-start-line="29" selection-end-line="31" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+            <state relative-caret-position="60">
+              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -164,12 +164,12 @@
         <option value="$PROJECT_DIR$/APPLE-APPS/NewFaculty/applicationCompleteList.php" />
         <option value="$PROJECT_DIR$/APPLE-APPS/NewFaculty/reviewing.php" />
         <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/updateApplication.php" />
-        <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/mainpage.php" />
         <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/sendTranscriptLink.php" />
         <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/recommendation.html" />
         <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/transcript.php" />
         <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/register.php" />
         <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/login.php" />
+        <option value="$PROJECT_DIR$/APPLE-APPS/LogIn/mainpage.php" />
       </list>
     </option>
   </component>
@@ -282,12 +282,12 @@
       <updated>1556118717752</updated>
       <workItem from="1556118721080" duration="2211000" />
       <workItem from="1556957072029" duration="1747000" />
-      <workItem from="1556958854756" duration="64477000" />
+      <workItem from="1556958854756" duration="64740000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68435000" />
+    <option name="totallyTimeSpent" value="68698000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -590,13 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/mainpage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="18" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/aplication.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-98">
@@ -646,17 +639,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/login.php">
+    <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/register.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="31" selection-end-column="7" />
+        <state relative-caret-position="60">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/register.php">
+    <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        <state relative-caret-position="435">
+          <caret line="29" selection-start-line="29" selection-end-line="31" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/APPLE-APPS/LogIn/mainpage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
         </state>
       </provider>
     </entry>

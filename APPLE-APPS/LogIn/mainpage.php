@@ -5,21 +5,34 @@ session_start();
      <title>My Application</title>
      <link rel="stylesheet" href="../../APPLE2/style.css">
  </head>
-<input type=button onClick="location.href='aplication.php'" value='Apply'>
-  <br />  
+ <h2>My Application</h2>
 
- 
-<input type=button onClick="location.href='status.php'" value='Status'>
- <br />
+ <form   method="post" action="application.php">
+     <input type="submit" name="apply" value="New Application">
+ </form>
+ <br>
+ <br>
+ <form   method="post" action="status.php">
+     <input type="submit" name="status" value='Application Status'>
+ </form>
+ <br>
+ <br>
+ <form   method="post" action="updateApplication.php">
+     <input type="submit" name="update" value='Update Application Infromation'>
+ </form>
+ <br>
+ <br>
+ <form   method="post" action="sendTranscriptLink.php">
+     <input type="submit" name="transcript" value='Send Transcript Online'>
+ </form>
+ <br>
+ <br>
+ <form   method="post" action="login.php">
+     <input type="submit" name="goBack" value='LOG OUT'>
+ </form>
+ <br>
+ <br>
 
- <input type=button onClick="location.href='updateApplication.php'" value='Update Application Information'>
- <br />
-
- <input type=button onClick="location.href='sendTranscriptLink.php'" value='Send Transcript Online'>
- <br />
-
- <input type=button onClick="location.href='login.php'" value='Log off'>
- <br />
 
 
 
