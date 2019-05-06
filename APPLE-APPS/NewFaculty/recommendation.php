@@ -59,12 +59,12 @@ $conn->close();
 
 if(isset($_POST['rate'])) {
     echo "session".$_SESSION["rid"];
-    $rid=$_SESSION['rid'];
+    $rid2=$_SESSION['rid'];
     $recGenq=$_POST['recGen'];
     $recCreq=$_POST['recCre'];
     $recRatingq=$_POST['recRating'];
 print_r($_SESSION);
-    $aQuery = "UPDATE recommendation  SET  rec_rating=$recRatingq, rec_generic='$recGenq', rec_credible='$recCreq' WHERE rid=$rid";
+    $aQuery = "UPDATE recommendation  SET  rec_rating=$recRatingq, rec_generic='$recGenq', rec_credible='$recCreq' WHERE rid=$rid2";
     $aResult = $conn->query($aQuery) or die("aResult Wrong $mysqli->error" . $mysqli->error);
     if($aResult==TRUE) {
         echo "Grade Recommendation Letter Successfully";
