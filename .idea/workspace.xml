@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0ae0e6af-1e1f-4566-9aa0-6567bdfb068b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/APPLE-APPS/NewFaculty/recommendation.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE-APPS/NewFaculty/recommendation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPLE-APPS/NewFaculty/reviewing.php" beforeDir="false" afterPath="$PROJECT_DIR$/APPLE-APPS/NewFaculty/reviewing.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +21,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/APPLE-APPS/NewFaculty/reviewing.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="675">
@@ -31,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/APPLE-APPS/NewFaculty/recommendation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="847">
-              <caret line="67" column="62" selection-start-line="67" selection-start-column="62" selection-end-line="67" selection-end-column="62" />
+            <state relative-caret-position="663">
+              <caret line="56" column="68" lean-forward="true" selection-start-line="56" selection-start-column="68" selection-end-line="56" selection-end-column="68" />
               <folding>
                 <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -158,8 +157,8 @@
         <option value="$PROJECT_DIR$/schema.sql" />
         <option value="$PROJECT_DIR$/APPLE-APPS/NewFaculty/applicationCompleteList.php" />
         <option value="$PROJECT_DIR$/APPLE-APPS/NewFaculty/makeRec.php" />
-        <option value="$PROJECT_DIR$/APPLE-APPS/NewFaculty/recommendation.php" />
         <option value="$PROJECT_DIR$/APPLE-APPS/NewFaculty/reviewing.php" />
+        <option value="$PROJECT_DIR$/APPLE-APPS/NewFaculty/recommendation.php" />
       </list>
     </option>
   </component>
@@ -274,12 +273,12 @@
       <updated>1556118717752</updated>
       <workItem from="1556118721080" duration="2211000" />
       <workItem from="1556957072029" duration="1747000" />
-      <workItem from="1556958854756" duration="50592000" />
+      <workItem from="1556958854756" duration="50784000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54550000" />
+    <option name="totallyTimeSpent" value="54742000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -621,17 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/APPLE-APPS/NewFaculty/recommendation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="847">
-          <caret line="67" column="62" selection-start-line="67" selection-start-column="62" selection-end-line="67" selection-end-column="62" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/APPLE2/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="566">
@@ -643,6 +631,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
           <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/APPLE-APPS/NewFaculty/recommendation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="56" column="68" lean-forward="true" selection-start-line="56" selection-start-column="68" selection-end-line="56" selection-end-column="68" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
