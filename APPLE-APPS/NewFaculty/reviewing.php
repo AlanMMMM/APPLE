@@ -75,8 +75,43 @@ if ($conn->connect_error) {
             echo "Recommendation Letter Content: "."<br>";
             echo $sRow["rec_letter"];
         }}}
-}
-$conn->close();
+ }else if(isset($_POST['goSearchLN'])){
+     if(isset($_POST['searchLN'])){
+         $searchq = $_POST['searchLN'];
+
+         $sQuery = "SELECT * FROM applicant A, application B, recommendation C WHERE A.last_name='$searchq' AND A.uid=B.uid AND A.uid=C.uid";
+         $sResult = $conn->query($sQuery) or die("mysql error".$mysqli->error);
+         if($sResult->num_rows==0)
+         {
+             echo "No Applicant Found";
+         }else{
+             while($sRow = $sResult->fetch_assoc()) {
+
+                 echo "Name: ". $sRow["first_name"]." ".$sRow["last_name"]."<br>";
+                 echo "Student UID: ". $sRow["uid"]."<br>";
+                 echo "Semester of Application: ". $sRow["app_term"]."<br>";
+                 echo "Applying for Degree: ".$sRow["degree_seeking"]."<br>";
+                 echo "Area of Interest: ". $sRow["area_of_interest"]."<br><br>";
+                 echo "Reviewer's Opinion"."<br>";
+                 echo "Rating: ".$sRow["app_rec"]."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Comment".$sRow['app_rec_comment']."<br><br>";
+                 echo "Exams"."<br>";
+                 echo "GRE &nbsp;&nbsp;&nbsp;"."Verbal: ". $sRow["GRE_verbal"]."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"."Quantitative: ".$sRow["GRE_quantitative"]."<br>";
+                 echo "Year of Exam: ".$sRow["exam_year"]."<br>";
+                 echo "GRE Advanced &nbsp;&nbsp;&nbsp;"."Score: ".$sRow["GRE_score"]."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"."Subject: ".$sRow["GRE_subject"]."<br>";
+                 echo "TOEFL Score: ".$sRow["TOEFL_score"]."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Year of Exam: ".$sRow["TOEFL_year"]."<br><br>";
+
+                 echo "Prior Degrees"."<br>";
+                 echo "Bachelor Degree: ".$sRow["bachelor_degree"]."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GPA: ".$sRow["bachelor_gpa"]."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Major: ".$sRow["bachelor_major"]."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Year: ".$sRow["bachelor_year"]."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;University: ".$sRow["bachelor_school"]."<br>";
+                 echo "Master Degree: ".$sRow["masters_degree"]."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GPA: ".$sRow["masters_gpa"]."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Major: ".$sRow["masters_major"]."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Year: ".$sRow["masters_year"]."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;University: ".$sRow["masters_school"]."<br><br>";
+                 echo "Application Material"."<br>";
+                 echo "Transcript Received: ". $sRow["transcript_received"]."<br>";
+                 echo "Recommendation Letter Received: ". $sRow["rec_received"]."<br>";
+                 echo "Recommender: ".$sRow["rec_fname"]." ".$sRow["rec_lname"]."<br>";
+                 echo "Recommender Tittle: ".$sRow["rec_title"]."<br>";
+                 echo "Recommendation Letter Content: "."<br>";
+                 echo $sRow["rec_letter"];
+             }}}
+ }
 ?>
 
 
