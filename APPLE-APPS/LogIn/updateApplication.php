@@ -120,7 +120,7 @@ session_start();
     <?php
     if(isset($_POST["change"])){
         $term=$_POST["infoSelection"];
-
+        $_SESSION['term']=$term;
     if($term=='ssn') {
         echo "<input type=\"number\" required = \"required\" name=\"ssn\" max = \"999999999\" ><br />";
     }
@@ -212,13 +212,13 @@ session_start();
 <?php
 if(isset($_POST["changeTo"]))
 {
-    $termm="$term";
-    echo $term;
-    if(isset($_POST[$termm])) {
+    $termm=$_SESSION['term'];
+    echo $termm;
+    if(isset($_POST["$termm"])) {
         echo "gilfjl";
-        $value=$_POST["$term"];
+        $value=$_POST["$termm"];
         $uid=$_SESSION['uid'];
-        $cquery = "UPDATE application SET $term='$value' WHERE uid=$uid";
+        $cquery = "UPDATE application SET $termm='$value' WHERE uid=$uid";
         $cresult = $conn->query($cquery) or die("mysql error".$mysqli->error);
         if	($cresult)	{
             echo		"Updated Successfully	<br/>";
