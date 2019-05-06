@@ -28,7 +28,7 @@ if ($conn->connect_error) {
         if($pResult==TRUE) {
             $fname=$row['first_name'];
             $lname=$row['last_name'];
-            $appyear=$row['app_year'];
+            $appyear=$rowApp['app_year'];
             $usernameUser=$rowUser['username'];
             $email=$rowApp['email'];
             $passwordUser=$rowUser['password'];
