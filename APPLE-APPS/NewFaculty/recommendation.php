@@ -53,7 +53,7 @@ if(isset($_POST['goSelect'])) {
 <?php
 
 if(isset($_POST['rate'])) {
-    echo $rid;
+    echo "rid".$rid;
     $recGenq=$_POST['recGen'];
     $recCreq=$_POST['recCre'];
     $recRatingq=$_POST['recRating'];
