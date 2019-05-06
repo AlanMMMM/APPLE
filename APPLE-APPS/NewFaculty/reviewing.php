@@ -9,6 +9,7 @@ $conn = new mysqli($servername,$username,$password,$dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+$fid=$_SESSION["userID"];
 if(isset($_POST['goBackFromRec'])){
 
         $recuid=$_SESSION["completeUid"];
@@ -87,7 +88,7 @@ if(isset($_POST['goBackFromRec'])){
     if(isset($_POST['search'])){
         $searchq = $_POST['search'];
         
-        $sQuery = "SELECT * FROM applicant A, application B, recommendation C WHERE A.uid=$searchq AND A.uid=B.uid AND A.uid=C.uid AND A.app_status='completed' AND rev_by1!=$fid AND rev_by2!=$fid AND rev_by3!=$fid";
+        $sQuery = "SELECT * FROM applicant A, application B WHERE A.uid=$searchq AND A.uid=B.uid  AND A.app_status='completed' AND rev_by1!=$fid AND rev_by2!=$fid AND rev_by3!=$fid";
         $sResult = $conn->query($sQuery) or die("mysql error".$mysqli->error);
 
         if($sResult->num_rows==0)

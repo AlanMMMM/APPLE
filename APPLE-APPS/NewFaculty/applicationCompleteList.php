@@ -52,7 +52,7 @@ session_start();
     <br><br><br><br><br>
 
     <h3 style="text-align: center;"> Please Search an Applicant Last Name </h3>
-    <form style="text-align: center;" action="dataUpdating.php" method="post">
+    <form style="text-align: center;" action="reviewing.php" method="post">
         Applicant Last Name: <input type="text" required="required" name="searchLN"><br>
         <input type="submit" name="goSearchLN" value="search" />
 
