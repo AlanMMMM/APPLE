@@ -12,7 +12,10 @@ session_start();
 <input type=button onClick="location.href='status.php'" value='Status'>
  <br />
 
- <input type=button onClick="location.href='updateApplication.php'" value='Log off'>
+ <input type=button onClick="location.href='updateApplication.php'" value='Update Application Information'>
+ <br />
+
+ <input type=button onClick="location.href='sendTranscriptLink.php'" value='Send Transcript Online'>
  <br />
 
  <input type=button onClick="location.href='login.php'" value='Log off'>
