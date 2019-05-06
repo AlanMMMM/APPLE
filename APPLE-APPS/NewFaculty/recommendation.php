@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +10,7 @@
 <body>
 <h2 style="text-align:center;"> Now please View and Grade the Recommendation Letter</h2>
 <?php
-session_start();
+
 $servername= "localhost";
 $username = "amstg";
 $password = "seas";
@@ -53,7 +56,7 @@ $conn->close();
     <input type="submit" name="rate" value="Submit">
 </form>
 <?php
-session_start();
+
 if(isset($_POST['rate'])) {
     $rid=$_SESSION['rid'];
     $recGenq=$_POST['recGen'];
