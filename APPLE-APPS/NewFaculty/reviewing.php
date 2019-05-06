@@ -15,7 +15,7 @@ if(isset($_POST['goBackFromRec'])){
         $searchq=$_SESSION['completeUid'];
     $oQuery = "SELECT * FROM applicant A, application B, recommendation C WHERE A.uid=$selectq AND A.uid=B.uid AND A.uid=C.uid AND A.app_status='completed'";
 
-    $oResult= $conn->query($oQuery) or die($mysqli->error);
+    $oResult= $conn->query($oQuery) or die("oResult Wrong $mysqli->error".$mysqli->error);
 
 
     while($oRow = $oResult->fetch_assoc()){
