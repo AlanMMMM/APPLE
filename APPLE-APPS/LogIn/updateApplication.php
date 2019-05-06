@@ -219,8 +219,7 @@ if(isset($_POST["changeTo"]))
 
         $value=$_POST["$termm"];
         $uid=$_SESSION['uid'];
-        echo $value;
-        echo $uid;
+
         $cquery = "UPDATE application SET $termm='$value' WHERE uid=$uid";
         $cresult = $conn->query($cquery) or die("mysql error".$mysqli->error);
         if	($cresult)	{
@@ -236,5 +235,8 @@ if(isset($_POST["changeTo"]))
 
 }
 ?>
+<form style="text-align: center;"  method="post" action="mainpage.php">
+    <input type="submit" name="goB" value="Go Back"
+</form>
 </body>
 </html>
