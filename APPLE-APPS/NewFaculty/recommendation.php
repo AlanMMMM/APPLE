@@ -62,7 +62,7 @@ if(isset($_POST['rate'])) {
     $recGenq=$_POST['recGen'];
     $recCreq=$_POST['recCre'];
     $recRatingq=$_POST['recRating'];
-
+print_r($_SESSION);
     $aQuery = "UPDATE recommendation  SET  rec_rating=$recRatingq, rec_generic='$recGenq', rec_credible='$recCreq' WHERE rid=$rid";
     $aResult = $conn->query($aQuery) or die("aResult Wrong $mysqli->error" . $mysqli->error);
     if($aResult==TRUE) {
