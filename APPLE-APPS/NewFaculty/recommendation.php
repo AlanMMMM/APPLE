@@ -55,11 +55,11 @@ $conn->close();
 <?php
 
 if(isset($_POST['rate'])) {
-    $rid=$SESSION['rid'];
+    $rid=$_SESSION['rid'];
     $recGenq=$_POST['recGen'];
     $recCreq=$_POST['recCre'];
     $recRatingq=$_POST['recRating'];
-    echo "rrrid".$rid;
+   
     $aQuery = "UPDATE recommendation  SET  rec_rating=$recRatingq, rec_generic='$recGenq', rec_credible='$recCreq' WHERE rid=$rid";
     $aResult = $conn->query($aQuery) or die("aResult Wrong $mysqli->error" . $mysqli->error);
     if($aResult==TRUE) {
