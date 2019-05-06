@@ -167,16 +167,51 @@ if(isset($_POST['goBackFromRec'])){
     View Recommendation Letter <select name="selection" required="required">
         <option disabled selected value> -- select a recommendation letter to view -- </option>
         <?php
+        if(isset($_POST['goSearchLN'])) {
+            if($sResult->num_rows!=0){
+            $query = "SELECT * FROM applicant A,  recommendation C WHERE A.uid=$recuid  AND A.uid=C.uid AND A.app_status='completed'";
+            $result = $conn->query($query) or die("mysql error" . $mysqli->error);
 
+            while ($row = mysqli_fetch_assoc($result)) {
+                $rowRid = $row['rid'];
+                echo "<option value=\"$rowRid\">" . "Recommendation Letter From " . $row['rec_fname'] . " " . $row['rec_lname'] . "</option>";
+            }
+            $conn->close();
+        }}
+        if(isset($_POST['goSearch'])){
+            if($sResult->num_rows!=0){
+                $query = "SELECT * FROM applicant A,  recommendation C WHERE A.uid=$recuid  AND A.uid=C.uid AND A.app_status='completed'";
+                $result = $conn->query($query) or die("mysql error" . $mysqli->error);
 
-        $query = "SELECT * FROM applicant A,  recommendation C WHERE A.uid=$recuid  AND A.uid=C.uid AND A.app_status='completed'";
-        $result = $conn->query($query) or die("mysql error".$mysqli->error);
-
-        while($row = mysqli_fetch_assoc($result)){
-            $rowRid=$row['rid'];
-            echo "<option value=\"$rowRid\">"."Recommendation Letter From ".$row['rec_fname']." ".$row['rec_lname'] . "</option>";
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $rowRid = $row['rid'];
+                    echo "<option value=\"$rowRid\">" . "Recommendation Letter From " . $row['rec_fname'] . " " . $row['rec_lname'] . "</option>";
+                }
+                $conn->close();
+            }
         }
-        $conn->close();
+        if(isset($_POST['goSelect'])){
+            if($oResult->num_rows!=0){
+                $query = "SELECT * FROM applicant A,  recommendation C WHERE A.uid=$recuid  AND A.uid=C.uid AND A.app_status='completed'";
+                $result = $conn->query($query) or die("mysql error" . $mysqli->error);
+
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $rowRid = $row['rid'];
+                    echo "<option value=\"$rowRid\">" . "Recommendation Letter From " . $row['rec_fname'] . " " . $row['rec_lname'] . "</option>";
+                }
+                $conn->close();
+            }
+        }
+        if(isset($_POST['goBackFromRec'])){
+            $query = "SELECT * FROM applicant A,  recommendation C WHERE A.uid=$recuid  AND A.uid=C.uid AND A.app_status='completed'";
+            $result = $conn->query($query) or die("mysql error" . $mysqli->error);
+
+            while ($row = mysqli_fetch_assoc($result)) {
+                $rowRid = $row['rid'];
+                echo "<option value=\"$rowRid\">" . "Recommendation Letter From " . $row['rec_fname'] . " " . $row['rec_lname'] . "</option>";
+            }
+            $conn->close();
+        }
         ?>
     </select>
     <br><br>
